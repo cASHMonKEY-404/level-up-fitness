@@ -5,13 +5,28 @@ test("log actual workouts, meals and steps; persist XP and history", async ({
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
-  await expect(page.getByText("0 / 500 XP")).toBeVisible();
-  await page.getByRole("button", { name: "Start workout" }).click();
-  await expect(page.getByRole("button", { name: "Close workout" })).toBeFocused();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "0");
+  await page.getByRole("button", { name: "Workout", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Choose for today", exact: true })
+    .first()
+    .click();
+  await page
+    .getByRole("button", { name: "Start workout", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Close workout" }),
+  ).toBeFocused();
   await page.keyboard.press("Shift+Tab");
-  await expect(page.getByRole("button", { name: "Finish workout" })).toBeFocused();
+  await expect(
+    page.getByRole("button", { name: "Finish workout" }),
+  ).toBeFocused();
   await page.keyboard.press("Tab");
-  await expect(page.getByRole("button", { name: "Close workout" })).toBeFocused();
+  await expect(
+    page.getByRole("button", { name: "Close workout" }),
+  ).toBeFocused();
   await page.getByRole("button", { name: "Finish workout" }).click();
   await expect(page.getByRole("alert")).toContainText(
     "at least one completed set",
@@ -33,25 +48,38 @@ test("log actual workouts, meals and steps; persist XP and history", async ({
     .check();
   await page.getByRole("button", { name: "Finish workout" }).click();
   await expect(page.getByText("First chapter", { exact: true })).toBeVisible();
-  await page.getByText("Full body foundations", { exact: true }).click();
+  await page.getByText("Full body foundations", { exact: true }).last().click();
   await expect(page.getByText("Set 1: 10 reps × 10 lb")).toBeVisible();
   await page.reload();
-  await expect(page.getByText("120 / 500 XP")).toBeVisible();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "120");
   await page.getByLabel("Today’s total steps").fill("8000");
   await page.getByRole("button", { name: "Save step total" }).click();
-  await expect(page.getByText("170 / 500 XP")).toBeVisible();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "170");
   await page.getByRole("button", { name: "Save step total" }).click();
-  await expect(page.getByText("170 / 500 XP")).toBeVisible();
-  await page.getByRole("button", { name: "Fuel", exact: true }).click();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "170");
+  await page.getByRole("button", { name: "Meal", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Add breakfast", exact: true })
+    .click();
   await page.getByLabel("Food or meal").fill("Greek yogurt");
-  await page.getByLabel("Calories (kcal)").fill("150");
-  await page.getByLabel("Protein (g)").fill("20");
+  await page.getByLabel("Calories (kcal)", { exact: true }).fill("150");
+  await page.getByLabel("Protein (g)", { exact: true }).fill("20");
+  await page.getByLabel("Carbohydrates (g)", { exact: true }).fill("6");
+  await page.getByLabel("Fat (g)", { exact: true }).fill("0");
   await page.getByRole("button", { name: "Log meal", exact: true }).click();
   await expect(page.getByText("Greek yogurt", { exact: true })).toBeVisible();
   await page.reload();
-  await expect(page.getByText("195 / 500 XP")).toBeVisible();
-  await page.getByRole("button", { name: "Progress", exact: true }).click();
-  await page.getByText("Full body foundations", { exact: true }).click();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "195");
+  await page.getByRole("button", { name: "Home", exact: true }).click();
+  await page.getByText("Full body foundations", { exact: true }).last().click();
   await expect(page.getByText("Set 1: 10 reps × 10 lb")).toBeVisible();
   expect(errors).toEqual([]);
   expect(
@@ -62,7 +90,7 @@ test("log actual workouts, meals and steps; persist XP and history", async ({
 });
 test("navigation and empty data render without overflow", async ({ page }) => {
   await page.goto("/");
-  for (const name of ["Today", "Train", "Fuel", "Progress"]) {
+  for (const name of ["Workout", "Meal", "Home"]) {
     await page.getByRole("button", { name, exact: true }).click();
     expect(
       await page.evaluate(
@@ -71,7 +99,7 @@ test("navigation and empty data render without overflow", async ({ page }) => {
     ).toBe(true);
   }
   await expect(page.getByText("Your first chapter awaits.")).toBeVisible();
-  await page.getByRole("button", { name: "Today", exact: true }).click();
+  await page.getByRole("button", { name: "Home", exact: true }).click();
   await page.screenshot({
     path: `/tmp/level-up-${test.info().project.name}.png`,
     fullPage: true,

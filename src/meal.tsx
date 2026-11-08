@@ -74,11 +74,7 @@ export function Meal({
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">
-            <Leaf size={15} /> A LITTLE NOURISHMENT
-          </div>
-          <h1>Good food. Good energy.</h1>
-          <p>Feed your everyday. Find what feels good for you.</p>
+          <h1>Meal</h1>
         </div>
         <button className="secondary" onClick={() => setEditingTargets(true)}>
           <Settings2 size={16} /> My targets
@@ -109,28 +105,6 @@ export function Meal({
         </span>
       </div>
       <Card className="calorie-card">
-        <div className="calorie-intro">
-          <span className="pill white">
-            <Flame size={13} /> DAILY ENERGY
-          </span>
-          <h2>
-            A little fuel for
-            <br />
-            everything you do.
-          </h2>
-          <p>
-            {calories >= targets.calories
-              ? "Your energy target is reached. Listen to your body."
-              : "Nourishment, not a numbers game."}
-          </p>
-          <span className="nutrition-date">
-            {formatDay(selected, {
-              weekday: "long",
-              month: "short",
-              day: "numeric",
-            })}
-          </span>
-        </div>
         <Ring value={calories} max={targets.calories} className="calorie-ring">
           <Flame size={21} />
           <strong>{Math.round(calories).toLocaleString()}</strong>
@@ -224,7 +198,7 @@ export function Meal({
       <div className="meal-layout">
         <div>
           <SectionTitle
-            title="A day of good things"
+            title="Meals"
             subtitle="Your meals, one bite at a time."
             action={
               <button
@@ -260,7 +234,7 @@ export function Meal({
                       <small>
                         {entries.length
                           ? `${Math.round(entries.reduce((n, f) => n + f.calories, 0))} kcal · ${entries.length} ${entries.length === 1 ? "entry" : "entries"}`
-                          : "A little something to keep you going"}
+                          : "No entries"}
                       </small>
                     </span>
                     {group !== "Uncategorized" && (
@@ -303,9 +277,7 @@ export function Meal({
                       ))}
                     </div>
                   ) : (
-                    <p className="meal-empty">
-                      Nothing logged yet. A fresh plate of possibilities.
-                    </p>
+                    <p className="meal-empty">No food logged.</p>
                   )}
                 </Card>
               );
@@ -317,11 +289,7 @@ export function Meal({
             <span className="icon-tile lilac">
               <Barcode size={26} />
             </span>
-            <h2>
-              Less typing.
-              <br />
-              More living.
-            </h2>
+            <h2>Barcode lookup</h2>
             <p>
               Scan or enter a packaged food’s barcode to find its nutrition
               label.
@@ -338,20 +306,9 @@ export function Meal({
             </button>
             <small>Open Food Facts · always verify the label</small>
           </Card>
-          <div className="kind-reminder meal-reminder">
-            <Salad size={36} />
-            <span>MORE THAN A NUMBER</span>
-            <p>
-              Some days are balanced.
-              <br />
-              Some days are birthday cake.
-              <br />
-              <b>There’s room for both.</b>
-            </p>
-          </div>
           <Card className="nutrition-history">
             <SectionTitle
-              title="Your food journal"
+              title="Nutrition history"
               action={
                 <button
                   className="icon-button"

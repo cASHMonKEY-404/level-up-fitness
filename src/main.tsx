@@ -108,10 +108,9 @@ function App() {
           </span>
           <span>
             level up<span className="brand-period">.</span>
-            <small>A LITTLE BETTER, EVERY DAY</small>
           </span>
         </a>
-        <span className="sidebar-caption">YOUR WELLNESS SPACE</span>
+
         <nav aria-label="Main navigation">
           {tabs.map(({ name, icon: Icon }) => (
             <button
@@ -126,24 +125,6 @@ function App() {
             </button>
           ))}
         </nav>
-        <div className="sidebar-note">
-          <div className="note-flower">
-            <Flower2 size={40} />
-          </div>
-          <h3>
-            A little progress.
-            <br />A lot of possibility.
-          </h3>
-          <p>
-            Make space for the version
-            <br />
-            of you that’s growing.
-          </p>
-          <span>
-            <ShieldCheck size={13} />
-            {storageError ? "Saving unavailable" : "Saved on your device"}
-          </span>
-        </div>
         <button className="sidebar-profile" onClick={() => setProfile(true)}>
           <span className="avatar">
             {(state.name || "Challenger").slice(0, 1).toUpperCase()}
@@ -157,9 +138,7 @@ function App() {
       </aside>
       <div className="main-wrap">
         <header className="topbar">
-          <span className="topbar-title">
-            Your space to <em>grow.</em>
-          </span>
+          <span className="topbar-title">{tab}</span>
           <a
             className="mobile-brand"
             href="#"
@@ -230,12 +209,6 @@ function App() {
               notify={setToast}
             />
           )}
-          <footer>
-            <span>
-              <Flower2 size={14} /> Small steps. Lasting change.
-            </span>
-            <span>Made for your everyday.</span>
-          </footer>
         </main>
       </div>
       {profile && (
@@ -327,7 +300,7 @@ function Home({
     routine = routines[index];
   const goals = [
     {
-      title: "Move your body",
+      title: "Workout",
       detail: "Complete a workout",
       done: trained,
       icon: Dumbbell,
@@ -335,7 +308,7 @@ function Home({
       action: () => go("Workout", today),
     },
     {
-      title: "Nourish yourself",
+      title: "Meal",
       detail: "Log your first meal",
       done: food.length > 0,
       icon: Utensils,
@@ -343,7 +316,7 @@ function Home({
       action: () => go("Meal", today),
     },
     {
-      title: "Take it in stride",
+      title: "8,000 steps",
       detail: "Reach 8,000 steps",
       done: steps >= 8000,
       icon: Footprints,
@@ -371,17 +344,10 @@ function Home({
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">
-            <Sun size={15} /> YOUR DAILY DOSE OF FEEL-GOOD
-          </div>
           <h1>
             Good {hour < 12 ? "morning" : hour < 18 ? "afternoon" : "evening"},{" "}
-            <span className="greeting-name">
-              {state.name || "Challenger"}{" "}
-              <span className="greeting-spark">✧</span>
-            </span>
+            <span className="greeting-name">{state.name || "Challenger"} </span>
           </h1>
-          <p>Let’s make a little room for a stronger, happier you.</p>
         </div>
         <span className="date-chip">
           <CalendarDays size={16} />
@@ -396,18 +362,7 @@ function Home({
         <div className="home-main">
           <section className="featured-workout">
             <div className="featured-copy">
-              <span className="pill">
-                <Sparkles size={13} />{" "}
-                {plan.routine === null
-                  ? "A little movement, if you feel like it"
-                  : "PICKED FOR YOU"}
-              </span>
               <h2>{routine.name}</h2>
-              <p>
-                {routine.detail}
-                <br />
-                Your next little win is waiting.
-              </p>
               <div className="workout-meta">
                 <span>
                   <Clock3 size={14} />
@@ -422,18 +377,11 @@ function Home({
               <button className="primary" onClick={() => start(index)}>
                 Start workout <ArrowRight size={17} />
               </button>
-              <small>Suggested routine · only completed sets are tracked</small>
             </div>
-            <WorkoutArt variant={index} />
-            <span className="featured-dots">
-              <i />
-              <i />
-              <i />
-            </span>
           </section>
           <Card className="activity-card">
             <SectionTitle
-              title="A little movement goes a long way"
+              title="Steps"
               subtitle="Your daily activity"
               action={
                 <span className="icon-tile peach">
@@ -448,19 +396,6 @@ function Home({
                 <small>of 8,000 steps</small>
               </Ring>
               <div className="activity-details">
-                <span className="soft-label">ONE STEP AT A TIME</span>
-                <h3>
-                  {steps >= 8000
-                    ? "Look at you go!"
-                    : steps > 0
-                      ? "You’re finding your stride."
-                      : "Every step is a fresh start."}
-                </h3>
-                <p>
-                  {steps >= 8000
-                    ? "Your daily step goal is complete. +50 XP earned."
-                    : "A short walk counts. So does a little dance break."}
-                </p>
                 <form
                   className="step-form"
                   onSubmit={(e) => {
@@ -486,7 +421,7 @@ function Home({
                     max="100000"
                     step="1"
                     required
-                    placeholder="Enter today’s total steps"
+                    placeholder="Step total"
                   />
                   <button aria-label="Save step total">
                     <Check size={20} />
@@ -498,78 +433,26 @@ function Home({
               </div>
             </div>
           </Card>
-          <Card className="schedule-overview">
-            <SectionTitle
-              title="Your week, at a glance"
-              subtitle="A little structure. Plenty of flexibility."
-              action={
-                <button
-                  className="text-button"
-                  onClick={() => go("Workout", today)}
-                >
-                  View plan <ArrowRight size={15} />
-                </button>
-              }
-            />
-            <Calendar
-              selected={today}
-              onSelect={(d) => go("Workout", d)}
-              completed={state.history.map((h) => h.date)}
-              planned={weekDays(today).filter(
-                (d) => planFor(state, d).routine !== null,
-              )}
-              compact
-            />
-            <div className="schedule-note">
-              <span className="icon-tile small lilac">
-                <Dumbbell size={17} />
-              </span>
-              <span>
-                {plan.routine === null
-                  ? "Today is a gentle recovery day"
-                  : `Up today: ${routine.name}`}
-                <small>
-                  {plan.routine === null
-                    ? "Rest is part of getting stronger."
-                    : `${routine.minutes} min · your home equipment`}
-                </small>
-              </span>
-              <span className="suggestion-label">
-                {state.schedule?.[today] ? "Your plan" : "Suggested plan"}
-              </span>
-            </div>
-          </Card>
         </div>
         <div className="home-side">
           <Card className="level-card">
-            <div className="level-card-heading">
-              <span className="icon-tile lilac">
-                <Sparkles size={23} />
-              </span>
-              <span className="pill subtle">YOUR JOURNEY</span>
-            </div>
-            <p className="soft-label">GROWING AT YOUR OWN PACE</p>
-            <h2>
-              Level {level}
-              <span>Challenger</span>
-            </h2>
+            <h2>Level {level}</h2>
             <div className="xp-heading">
               <span>{progress} / 500 XP</span>
               <small>{xp.toLocaleString()} total XP</small>
             </div>
             <Bar value={progress} max={500} label="Level XP progress" />
-            <p>{500 - progress} XP to your next chapter.</p>
           </Card>
           <Card className="daily-goals">
             <SectionTitle
-              title="Little wins, today"
+              title="Daily goals"
               action={
                 <span className="count-chip">
                   {goals.filter((g) => g.done).length}/3
                 </span>
               }
             />
-            <p className="card-subtitle">Good habits. No pressure.</p>
+
             <div>
               {goals.map((g) => (
                 <button
@@ -582,27 +465,16 @@ function Home({
                   </span>
                   <span>
                     <b>{g.title}</b>
-                    <small>{g.detail}</small>
                   </span>
-                  <em>{g.done ? "Done" : `+${g.xp}`}</em>
+                  <em>{g.done ? "Done" : `+${g.xp} XP`}</em>
                 </button>
               ))}
             </div>
           </Card>
-          <div className="kind-reminder">
-            <Flower2 size={35} />
-            <span>YOUR FRIENDLY REMINDER</span>
-            <p>
-              You don’t have to do it all.
-              <br />
-              <b>Just a little, for yourself.</b>
-            </p>
-            <i>✧</i>
-          </div>
         </div>
       </div>
       <SectionTitle
-        title="Small wins worth celebrating"
+        title="Achievements"
         subtitle="Your milestones, at your pace."
         action={
           <span className="pill white">
@@ -617,13 +489,9 @@ function Home({
             key={b.title}
             className={`achievement-card ${b.value >= b.max ? "unlocked" : ""}`}
           >
-            <Badge kind={i} earned={b.value >= b.max} />
             <div>
-              <span className="soft-label">
-                {b.value >= b.max ? "WELL EARNED" : "A LITTLE CLOSER"}
-              </span>
               <h3>{b.title}</h3>
-              <p>{b.desc}</p>
+
               <Bar
                 value={b.value}
                 max={b.max}
@@ -632,7 +500,7 @@ function Home({
               />
               <small>
                 {b.value >= b.max
-                  ? "Unlocked — this one’s yours."
+                  ? "Unlocked"
                   : `${Math.min(b.value, b.max)} / ${b.max} ${i === 2 ? "XP" : "workouts"}`}
               </small>
             </div>
@@ -641,7 +509,7 @@ function Home({
       </div>
       <Card className="recent-card">
         <SectionTitle
-          title="Look how far you’ve come"
+          title="Recent workouts"
           subtitle="Your workout history · all real, all you."
           action={
             state.history.length > 3 ? (
@@ -692,11 +560,7 @@ function WorkoutPage({
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">
-            <Dumbbell size={15} /> YOUR MOVEMENT PRACTICE
-          </div>
-          <h1>A little stronger, every day.</h1>
-          <p>Make a plan that moves with you. There’s room to be flexible.</p>
+          <h1>Workout</h1>
         </div>
         <span className="date-chip">
           <Leaf size={16} /> Home equipment
@@ -704,7 +568,7 @@ function WorkoutPage({
       </div>
       <Card className="calendar-card">
         <SectionTitle
-          title="Your weekly rhythm"
+          title="Schedule"
           subtitle="Choose a day to see what’s ahead."
           action={
             <span className="pill subtle">
@@ -831,7 +695,7 @@ function WorkoutPage({
       {routine && (
         <Card className="exercise-preview">
           <SectionTitle
-            title="Meet your movements"
+            title="Exercises"
             subtitle="Simple guidance to help you feel confident. Tap to explore."
           />
           {routine.exercises.map((e, i) => (
@@ -864,7 +728,7 @@ function WorkoutPage({
         </Card>
       )}
       <SectionTitle
-        title="Find your kind of strong"
+        title="Workout library"
         subtitle="Three simple routines for the equipment you already have."
       />
       <div className="workout-library">
@@ -876,7 +740,7 @@ function WorkoutPage({
             </div>
             <div className="routine-info">
               <h3>{r.name}</h3>
-              <p>{r.detail}</p>
+
               <div className="workout-meta">
                 <span>
                   <Clock3 size={14} />

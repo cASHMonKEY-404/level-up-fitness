@@ -4002,3 +4002,374 @@ textarea {
 .progress-ring {
   transition: --progress 0.8s ease;
 }
+
+/* Minimal presentation: one text family, two weights and a small size scale. */
+:root {
+  --muted: #777080;
+  --shadow: none;
+  --radius: 18px;
+}
+.app-shell {
+  font-weight: 400;
+}
+.app-shell
+  :is(
+    p,
+    span,
+    small,
+    b,
+    strong,
+    em,
+    label,
+    li,
+    summary,
+    button,
+    input,
+    select,
+    textarea,
+    a
+  ) {
+  font-family: inherit;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.app-shell :is(p, small, label, li, input, select, textarea) {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell
+  :is(
+    button,
+    a,
+    .pill,
+    .soft-label,
+    .count-chip,
+    .text-button,
+    .secondary,
+    .primary,
+    .workout-meta,
+    .eyebrow
+  ) {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.app-shell :is(h2, h3) {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+.app-shell h1 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+.app-shell :is(b, strong) {
+  font-weight: 600;
+}
+.app-shell .eyebrow {
+  display: none;
+}
+.app-shell .card {
+  box-shadow: none;
+  border: 1px solid #ece7f2;
+  border-radius: 18px;
+  background: #fff;
+}
+.app-shell .page-heading {
+  margin-bottom: 24px;
+}
+.app-shell .page-heading h1 {
+  margin: 0;
+}
+.app-shell .section-title {
+  margin-bottom: 16px;
+}
+.app-shell .section-title h2 {
+  font-size: 18px;
+}
+.app-shell .sidebar-profile {
+  margin-top: auto;
+}
+.app-shell .sidebar nav {
+  margin-top: 40px;
+}
+.app-shell .topbar-title {
+  font-size: 14px;
+}
+.app-shell .home-layout {
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+  align-items: start;
+}
+.app-shell .featured-workout {
+  background: #eee8f7;
+  min-height: 0;
+  padding: 24px;
+  border-radius: 18px;
+}
+.app-shell .featured-workout::before {
+  display: none;
+}
+.app-shell .featured-copy {
+  width: 100%;
+}
+.app-shell .featured-copy h2 {
+  font-size: 22px;
+  margin: 0;
+  max-width: none;
+}
+.app-shell .featured-copy .workout-meta {
+  font-size: 14px;
+  gap: 16px;
+  margin: 16px 0 22px;
+}
+.app-shell .primary {
+  box-shadow: none;
+}
+.app-shell .activity-content {
+  gap: 24px;
+}
+.app-shell .activity-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app-shell .step-form {
+  margin: 0;
+}
+.app-shell .step-form input {
+  font-size: 16px;
+}
+.app-shell .step-form input::placeholder {
+  font-size: 12px;
+}
+.app-shell .activity-details > small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.app-shell .level-card h2 {
+  font-size: 18px;
+}
+.app-shell .xp-heading {
+  margin: 16px 0 12px;
+}
+.app-shell .xp-heading > span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell .xp-heading small {
+  font-size: 12px;
+}
+.app-shell .goal-row {
+  padding: 14px 0;
+}
+.app-shell .goal-row b {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell .goal-row em {
+  font-size: 12px;
+}
+.app-shell .achievement-grid {
+  gap: 12px;
+}
+.app-shell .achievement-card {
+  padding: 20px;
+  display: block;
+}
+.app-shell .achievement-card h3 {
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+.app-shell .achievement-card small {
+  font-size: 12px;
+}
+.app-shell .pill {
+  font-size: 12px;
+  background: #f5f1fa;
+}
+.app-shell .history-title b {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell .history-title small {
+  font-size: 12px;
+}
+.app-shell .history-xp {
+  font-size: 12px;
+}
+.app-shell .privacy-note {
+  font-size: 12px;
+}
+.app-shell .calorie-card {
+  background: #eee8f7;
+  justify-content: center;
+  gap: 48px;
+}
+.app-shell .calorie-stats small {
+  font-size: 12px;
+}
+.app-shell .calorie-stats b {
+  font-size: 22px;
+}
+.app-shell .macro-card h3 {
+  font-size: 14px;
+}
+.app-shell .macro-card > p {
+  font-size: 12px;
+}
+.app-shell .meal-group-heading small {
+  font-size: 12px;
+}
+.app-shell .meal-empty {
+  font-size: 14px;
+  margin-left: 0;
+}
+.app-shell .food-entry small {
+  font-size: 12px;
+}
+.app-shell .workout-detail-copy h2 {
+  font-size: 22px;
+}
+.app-shell .routine-info h3 {
+  font-size: 18px;
+}
+.app-shell .routine-info .workout-meta {
+  font-size: 14px;
+}
+.app-shell .equipment-tags > span {
+  font-size: 12px;
+}
+.app-shell .guide-label {
+  font-size: 12px;
+}
+.app-shell .exercise-guide b {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell .exercise-guide small {
+  font-size: 12px;
+}
+.app-shell .nutrition-history-row b {
+  font-size: 14px;
+  font-weight: 400;
+}
+.app-shell .nutrition-history-row small {
+  font-size: 12px;
+}
+@media (max-width: 1000px) {
+  .app-shell .home-layout {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .home-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .app-shell .home-side {
+    display: flex;
+  }
+  .app-shell .sidebar nav {
+    margin-top: 0;
+  }
+  .app-shell .nav-item {
+    font-size: 12px;
+  }
+  .app-shell .page-heading .date-chip {
+    position: static;
+    background: none;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+  .app-shell .date-chip svg {
+    display: none;
+  }
+  .app-shell .page-heading h1 {
+    font-size: 24px;
+  }
+  .app-shell .greeting-name {
+    display: block;
+  }
+  .app-shell .featured-copy h2 {
+    font-size: 22px;
+  }
+  .app-shell .workout-meta {
+    font-size: 12px;
+  }
+  .app-shell .featured-copy .workout-meta {
+    font-size: 12px;
+    gap: 12px;
+  }
+  .app-shell .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .calorie-card {
+    gap: 24px;
+  }
+  .app-shell .calorie-stats {
+    margin: 0;
+  }
+  .app-shell .macro-card {
+    padding: 16px 10px;
+  }
+  .app-shell .macro-card h3 {
+    font-size: 12px;
+  }
+  .app-shell .macro-card > p {
+    font-size: 10px;
+  }
+  .app-shell .exercise-guide small {
+    font-size: 10px;
+  }
+  .app-shell .guide-label {
+    font-size: 10px;
+  }
+  .app-shell .guide-label > svg {
+    display: none;
+  }
+  .app-shell .history-title b {
+    font-size: 12px;
+  }
+  .app-shell .history-title small {
+    font-size: 11px;
+  }
+  .app-shell .history-xp {
+    font-size: 11px;
+  }
+  .app-shell .meal-group-heading small {
+    font-size: 11px;
+  }
+  .app-shell .form-grid label {
+    font-size: 12px;
+  }
+  .app-shell .set-head {
+    font-size: 10px;
+  }
+}
+.app-shell .achievement-grid {
+  display: block;
+  background: #fff;
+  border: 1px solid #ece7f2;
+  border-radius: 18px;
+  padding: 0 20px;
+}
+.app-shell .achievement-card.card {
+  padding: 18px 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.app-shell .achievement-card.card + .achievement-card.card {
+  border-top: 1px solid #eee8f4;
+}
+.app-shell .achievement-card h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.app-shell .achievement-card small {
+  margin-top: 8px;
+}

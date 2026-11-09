@@ -285,6 +285,52 @@ export function WorkoutArt({
   className?: string;
 }) {
   const id = useId();
+  if (variant === 3)
+    return (
+      <svg
+        className={`workout-art ${className}`}
+        viewBox="0 0 360 300"
+        fill="none"
+        aria-hidden="true"
+      >
+        <ellipse cx="180" cy="264" rx="125" ry="12" fill="#e4ddec" />
+        <rect x="56" y="230" width="236" height="25" rx="12" fill="#a495be" />
+        <rect x="80" y="235" width="178" height="10" rx="5" fill="#dcd3e8" />
+        <path
+          d="M265 231 244 110h-38"
+          stroke="#a495be"
+          strokeWidth="13"
+          strokeLinecap="round"
+        />
+        <rect x="215" y="83" width="57" height="36" rx="7" fill="#c1b0d7" />
+        <rect x="226" y="91" width="34" height="15" rx="3" fill="#f5f0fa" />
+        <circle cx="164" cy="73" r="20" fill="#dcae9a" />
+        <path
+          d="m160 109 15 55"
+          stroke="#b4a0d2"
+          strokeWidth="28"
+          strokeLinecap="round"
+        />
+        <path
+          d="m169 124 28 26 29-14"
+          stroke="#dcae9a"
+          strokeWidth="12"
+          strokeLinecap="round"
+        />
+        <path
+          d="m172 170-31 28-15 26m54-55 20 28 21 27"
+          stroke="#8d7eac"
+          strokeWidth="18"
+          strokeLinecap="round"
+        />
+        <path
+          d="M114 227h24m72 0h24"
+          stroke="#f9f6fc"
+          strokeWidth="10"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
   return (
     <svg
       className={`workout-art ${className}`}
@@ -515,14 +561,26 @@ export function History({
                 <b>{h.name}</b>
                 <small>
                   {formatDay(h.date)} ·{" "}
-                  {h.exercises.reduce((n, e) => n + e.sets.length, 0)} sets
-                  logged
+                  {h.cardio
+                    ? `${h.cardio.minutes} min walk`
+                    : `${h.exercises.reduce((n, e) => n + e.sets.length, 0)} sets logged`}
                 </small>
               </span>
               <span className="history-xp">+{h.xp} XP</span>
               <ChevronRight size={16} />
             </summary>
             <div className="history-sets">
+              {h.cardio && (
+                <p>
+                  {h.cardio.minutes} minutes
+                  {h.cardio.speed !== undefined
+                    ? ` · ${h.cardio.speed} mph`
+                    : ""}
+                  {h.cardio.distance !== undefined
+                    ? ` · ${h.cardio.distance} miles`
+                    : ""}
+                </p>
+              )}
               {h.exercises.map((e, i) => (
                 <div key={i}>
                   <b>{e.name}</b>

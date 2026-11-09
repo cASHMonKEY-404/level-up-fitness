@@ -23,6 +23,7 @@ export type Session = {
   name: string;
   exercises: { name: string; sets: SetEntry[] }[];
   xp: number;
+  cardio?: { minutes: number; speed?: number; distance?: number };
 };
 export type Food = {
   id: string;
@@ -77,7 +78,7 @@ export const routines = [
       ["Goblet squat", "10 lb kettlebell", 10],
       ["Dumbbell floor press", "Two 5 lb dumbbells · weight per hand", 5],
       ["Band row", "Resistance band · enter 0 lb", 0],
-      ["Medicine ball dead bug", "Medicine ball · use your actual weight", 0],
+      ["Dead bug", "Bodyweight · reps per side · enter 0 lb", 0],
     ],
   },
   {
@@ -101,12 +102,16 @@ export const routines = [
       ["Kettlebell deadlift", "10 lb kettlebell", 10],
       ["Goblet squat", "10 lb kettlebell", 10],
       ["Band lateral walk", "Resistance band · reps per side", 0],
-      [
-        "Medicine ball glute bridge",
-        "Medicine ball · use your actual weight",
-        0,
-      ],
+      ["Glute bridge", "Bodyweight · enter 0 lb", 0],
     ],
+  },
+  {
+    name: "Treadmill walk",
+    tag: "CARDIO",
+    minutes: 20,
+    detail:
+      "Walk at a comfortable pace. Adjust speed and duration to suit you.",
+    exercises: [],
   },
 ] as const;
 export function loadState(): State {
@@ -160,7 +165,16 @@ export function planFor(state: State, key: string): Plan {
   if (saved) return saved;
   const index = (parseDay(key).getDay() + 6) % 7;
   return {
-    routine: index === 0 ? 0 : index === 2 ? 1 : index === 4 ? 2 : null,
+    routine:
+      index === 0
+        ? 0
+        : index === 2
+          ? 1
+          : index === 4
+            ? 2
+            : index === 1 || index === 3
+              ? 3
+              : null,
     note: "",
   };
 }
@@ -238,9 +252,9 @@ export const exerciseGuides: Record<string, string[]> = {
     "Keep your chest tall and pull your elbows back toward your ribs.",
     "Release slowly without rounding your back. Keep the band away from your face.",
   ],
-  "Medicine ball dead bug": [
-    "Lie on your back, knees above hips. Hold a light medicine ball above your chest.",
-    "Keep your lower back gently pressed down while you extend one leg.",
+  "Dead bug": [
+    "Lie on your back with knees above hips and arms reaching toward the ceiling.",
+    "Keep your lower back gently pressed down while extending one leg and the opposite arm.",
     "Return slowly and alternate legs. Count reps per side.",
   ],
   "Bicep curl": [
@@ -273,9 +287,9 @@ export const exerciseGuides: Record<string, string[]> = {
     "Step sideways with control, keeping knees aligned with toes.",
     "Bring the trailing foot in without losing tension. Repeat both directions.",
   ],
-  "Medicine ball glute bridge": [
-    "Lie on your back with knees bent, feet flat. Secure a light ball on your hips with your hands.",
+  "Glute bridge": [
+    "Lie on your back with knees bent, feet flat, and arms resting by your sides.",
     "Brace your core and lift hips by squeezing your glutes, without arching your back.",
-    "Lower slowly. Use bodyweight instead if the ball is uncomfortable.",
+    "Lower slowly with control. Keep the movement comfortable.",
   ],
 };

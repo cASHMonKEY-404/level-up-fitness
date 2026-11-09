@@ -247,7 +247,7 @@ function App() {
         </Modal>
       )}
       {active && (
-        <WorkoutLogger
+        <SessionLogger
           index={active.index}
           date={active.date}
           onClose={() => setActive(null)}
@@ -370,7 +370,9 @@ function Home({
                 </span>
                 <span>
                   <Dumbbell size={14} />
-                  {routine.exercises.length} exercises
+                  {routine.exercises.length
+                    ? `${routine.exercises.length} exercises`
+                    : "Treadmill"}
                 </span>
                 <span>+120 XP</span>
               </div>
@@ -636,12 +638,18 @@ function WorkoutPage({
               </span>
               <span>
                 <Dumbbell size={15} />
-                {routine.exercises.length} exercises
+                {routine.exercises.length
+                  ? `${routine.exercises.length} exercises`
+                  : "Treadmill"}
               </span>
             </div>
             <div className="equipment-tags">
               <span>At home</span>
-              <span>2 × 12 suggested</span>
+              <span>
+                {routine.exercises.length
+                  ? "2 × 12 suggested"
+                  : "Comfortable walking pace"}
+              </span>
               <span>+120 XP</span>
             </div>
             {plan.note && <p className="plan-note">Your note: {plan.note}</p>}
@@ -692,7 +700,7 @@ function WorkoutPage({
           </div>
         </Card>
       )}
-      {routine && (
+      {routine && routine.exercises.length > 0 && (
         <Card className="exercise-preview">
           <SectionTitle
             title="Exercises"
@@ -729,7 +737,7 @@ function WorkoutPage({
       )}
       <SectionTitle
         title="Workout library"
-        subtitle="Three simple routines for the equipment you already have."
+        subtitle="Routines for your dumbbells, kettlebell, bands, and treadmill."
       />
       <div className="workout-library">
         {routines.map((r, i) => (
@@ -746,7 +754,11 @@ function WorkoutPage({
                   <Clock3 size={14} />
                   {r.minutes} min
                 </span>
-                <span>{r.exercises.length} exercises</span>
+                <span>
+                  {r.exercises.length
+                    ? `${r.exercises.length} exercises`
+                    : "Treadmill"}
+                </span>
               </div>
               <button
                 className="secondary"
@@ -903,6 +915,110 @@ function Guide({ name }: { name: string }) {
         comfort.
       </small>
     </div>
+  );
+}
+function SessionLogger(props: {
+  index: number;
+  date: string;
+  onClose: () => void;
+  onFinish: (session: Session) => void;
+}) {
+  return routines[props.index].exercises.length ? (
+    <WorkoutLogger {...props} />
+  ) : (
+    <TreadmillLogger {...props} />
+  );
+}
+function TreadmillLogger({
+  index,
+  date,
+  onClose,
+  onFinish,
+}: {
+  index: number;
+  date: string;
+  onClose: () => void;
+  onFinish: (session: Session) => void;
+}) {
+  return (
+    <Modal
+      title={routines[index].name}
+      onClose={onClose}
+      closeLabel="Close workout"
+      confirmClose
+    >
+      <p className="modal-intro">
+        Record what you completed. Use your treadmill display for speed and
+        distance. Steps are logged separately on Home.
+      </p>
+      <form
+        className="form-stack"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const data = new FormData(e.currentTarget);
+          onFinish({
+            id: crypto.randomUUID(),
+            date,
+            name: routines[index].name,
+            exercises: [],
+            xp: 120,
+            cardio: {
+              minutes: Number(data.get("minutes")),
+              ...(data.get("speed")
+                ? { speed: Number(data.get("speed")) }
+                : {}),
+              ...(data.get("distance")
+                ? { distance: Number(data.get("distance")) }
+                : {}),
+            },
+          });
+        }}
+      >
+        <label>
+          Minutes completed
+          <input
+            name="minutes"
+            type="number"
+            min="1"
+            max="300"
+            step="1"
+            required
+            placeholder="e.g. 20"
+          />
+        </label>
+        <div className="form-grid">
+          <label>
+            Speed (mph, optional)
+            <input
+              name="speed"
+              type="number"
+              min="0.1"
+              max="15"
+              step="0.1"
+              placeholder="e.g. 2.5"
+            />
+          </label>
+          <label>
+            Distance (miles, optional)
+            <input
+              name="distance"
+              type="number"
+              min="0.01"
+              max="50"
+              step="0.01"
+              placeholder="e.g. 0.8"
+            />
+          </label>
+        </div>
+        <p className="muted">
+          Start slowly, use your treadmill’s safety clip, and stop if you feel
+          unwell.
+        </p>
+        <button className="primary">
+          Finish workout <span>+120 XP</span>
+        </button>
+      </form>
+    </Modal>
   );
 }
 function WorkoutLogger({

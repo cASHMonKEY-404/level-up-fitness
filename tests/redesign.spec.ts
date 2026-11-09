@@ -261,3 +261,62 @@ test("failed barcode lookup keeps manual logging available", async ({
   await page.getByRole("button", { name: "Log meal", exact: true }).click();
   await expect(page.getByText("My own snack", { exact: true })).toBeVisible();
 });
+
+test("home equipment routines and treadmill history persist without estimated steps", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Workout", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Choose for today", exact: true })
+    .first()
+    .click();
+  await page
+    .getByRole("button", { name: "Start workout", exact: true })
+    .click();
+  await expect(
+    page.getByRole("spinbutton", {
+      name: "Goblet squat set 1 weight in pounds",
+      exact: true,
+    }),
+  ).toHaveValue("10");
+  await expect(page.getByText("Dead bug", { exact: true })).toBeVisible();
+  await expect(page.getByText(/Medicine ball/)).toHaveCount(0);
+  page.once("dialog", (d) => d.accept());
+  await page
+    .getByRole("button", { name: "Close workout", exact: true })
+    .click();
+  await page
+    .getByRole("button", { name: "Choose for today", exact: true })
+    .last()
+    .click();
+  await page
+    .getByRole("button", { name: "Start workout", exact: true })
+    .click();
+  await page.getByLabel("Minutes completed").fill("20");
+  await page.getByLabel("Speed (mph, optional)").fill("2.5");
+  await page.getByLabel("Distance (miles, optional)").fill("0.83");
+  await page
+    .getByRole("button", { name: "Finish workout" })
+    .click();
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "120");
+  await page.locator("summary").filter({ hasText: "Treadmill walk" }).click();
+  await expect(
+    page.getByText("20 minutes · 2.5 mph · 0.83 miles"),
+  ).toBeVisible();
+  await page.reload();
+  const state = await page.evaluate(() =>
+    JSON.parse(localStorage.getItem("levelup-react-v1")!),
+  );
+  expect(state.history[0].cardio).toEqual({
+    minutes: 20,
+    speed: 2.5,
+    distance: 0.83,
+  });
+  expect(state.steps).toEqual({});
+  await expect(
+    page.getByRole("progressbar", { name: "Level XP progress" }),
+  ).toHaveAttribute("aria-valuenow", "120");
+});

@@ -314,7 +314,12 @@ test("home equipment routines and treadmill history persist without estimated st
     speed: 2.5,
     distance: 0.83,
     incline: 4,
+    seconds: 0,
+    method: "distance",
+    stepLength: 28,
   });
+  expect(state.stepEntries[0].estimate.steps).toBe(1878);
+  expect(state.stepEntries[0].included).toBe(false);
   expect(state.steps).toEqual({});
   await expect(
     page.getByRole("progressbar", { name: "Level XP progress" }),

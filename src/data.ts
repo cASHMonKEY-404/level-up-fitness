@@ -1,3 +1,4 @@
+import type { TreadmillInput, StepEntry } from "./steps";
 export const day = () => dateKey(new Date());
 export const dateKey = (d: Date) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -23,12 +24,7 @@ export type Session = {
   name: string;
   exercises: { name: string; sets: SetEntry[] }[];
   xp: number;
-  cardio?: {
-    minutes: number;
-    speed?: number;
-    distance?: number;
-    incline?: number;
-  };
+  cardio?: TreadmillInput;
 };
 export type Food = {
   id: string;
@@ -63,6 +59,7 @@ export type State = {
   schedule?: Record<string, Plan>;
   targets?: Targets;
   name?: string;
+  stepEntries?: StepEntry[];
 };
 export const emptyState = (): State => ({ history: [], food: [], steps: {} });
 export const xpTotal = (s: State) =>

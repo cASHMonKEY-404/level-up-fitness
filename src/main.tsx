@@ -48,6 +48,13 @@ import {
 } from "./components";
 import { Meal } from "./meal";
 import "./style.css";
+import { TreadmillForm } from "./treadmill";
+import {
+  saveStepEntry,
+  setManualSteps,
+  durationLabel,
+  type StepEntry,
+} from "./steps";
 
 type Tab = "Home" | "Workout" | "Meal";
 type Update = (next: State) => void;
@@ -251,8 +258,9 @@ function App() {
           index={active.index}
           date={active.date}
           onClose={() => setActive(null)}
-          onFinish={(session) => {
-            commit({ ...state, history: [...state.history, session] });
+          onFinish={(session, entry) => {
+            const next = { ...state, history: [...state.history, session] };
+            commit(entry ? saveStepEntry(next, entry) : next);
             setActive(null);
             go("Home");
             setToast("A little stronger. Workout saved · +120 XP");
@@ -292,6 +300,9 @@ function Home({
   notify: (s: string) => void;
 }) {
   const [allHistory, setAllHistory] = useState(false);
+  const [calculator, setCalculator] = useState<{ entry?: StepEntry } | null>(
+    null,
+  );
   const steps = state.steps[today] || 0,
     food = state.food.filter((f) => f.date === today),
     trained = state.history.some((h) => h.date === today),
@@ -321,7 +332,7 @@ function Home({
       done: steps >= 8000,
       icon: Footprints,
       xp: 50,
-      action: () => document.getElementById("steps-input")?.focus(),
+      action: () => setCalculator({}),
     },
   ];
   const badges = [
@@ -398,42 +409,83 @@ function Home({
                 <small>of 8,000 steps</small>
               </Ring>
               <div className="activity-details">
-                <form
-                  className="step-form"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    const stepsValue = Number(
-                      new FormData(e.currentTarget).get("steps"),
-                    );
-                    commit({
-                      ...state,
-                      steps: { ...state.steps, [today]: stepsValue },
-                    });
-                    notify("Today’s step total updated");
-                  }}
-                >
-                  <label className="sr-only" htmlFor="steps-input">
-                    Today’s total steps
-                  </label>
-                  <input
-                    id="steps-input"
-                    name="steps"
-                    type="number"
-                    min="0"
-                    max="100000"
-                    step="1"
-                    required
-                    placeholder="Step total"
-                  />
-                  <button aria-label="Save step total">
-                    <Check size={20} />
-                  </button>
-                </form>
-                <small className="muted">
-                  Manual daily total · no device sync
-                </small>
+                <button className="primary" onClick={() => setCalculator({})}>
+                  Calculate treadmill steps
+                </button>
+                {(state.stepEntries || []).some(
+                  (e) => e.date === today && e.included,
+                ) && (
+                  <small className="calculator-note">
+                    Daily total includes treadmill estimates.
+                  </small>
+                )}
+                <details className="manual-steps">
+                  <summary>Enter a daily total instead</summary>
+                  <form
+                    className="step-form"
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      const stepsValue = Number(
+                        new FormData(e.currentTarget).get("steps"),
+                      );
+                      commit(setManualSteps(state, today, stepsValue));
+                      notify("Today’s step total updated");
+                    }}
+                  >
+                    <label className="sr-only" htmlFor="steps-input">
+                      Today’s total steps
+                    </label>
+                    <input
+                      id="steps-input"
+                      name="steps"
+                      type="number"
+                      min="0"
+                      max="100000"
+                      step="1"
+                      required
+                      placeholder="Step total"
+                    />
+                    <button aria-label="Save step total">
+                      <Check size={20} />
+                    </button>
+                  </form>
+                  <small className="muted">
+                    Replaces the whole day’s total, including any estimates
+                    already added.
+                  </small>
+                </details>
               </div>
             </div>
+            {(state.stepEntries || []).some((e) => e.date === today) && (
+              <div className="step-entry-list">
+                {(state.stepEntries || [])
+                  .filter((e) => e.date === today)
+                  .map((entry) => (
+                    <button
+                      key={entry.id}
+                      className="step-entry"
+                      onClick={() => setCalculator({ entry })}
+                      aria-label={`Edit step estimate ${entry.id}`}
+                    >
+                      <span>
+                        {durationLabel(entry.input)}
+                        {entry.input.distance !== undefined
+                          ? ` · ${entry.input.distance} mi`
+                          : ""}
+                        <small>
+                          {entry.included
+                            ? "Included in daily total"
+                            : "Not added separately"}
+                        </small>
+                      </span>
+                      <span>
+                        ≈ {entry.estimate.steps.toLocaleString()}
+                        <ChevronRight size={15} />
+                      </span>
+                    </button>
+                  ))}
+              </div>
+            )}
           </Card>
         </div>
         <div className="home-side">
@@ -535,6 +587,57 @@ function Home({
         <ShieldCheck size={14} /> Your progress is saved in this browser. No
         account or cloud backup yet.
       </p>
+      {calculator && (
+        <Modal
+          title="Treadmill step calculator"
+          onClose={() => setCalculator(null)}
+        >
+          <p className="modal-intro">
+            Enter your treadmill readings. This saves a step estimate, not a
+            workout.
+          </p>
+          <TreadmillForm
+            initial={calculator.entry?.input}
+            included={calculator.entry?.included}
+            requireEstimate
+            submitLabel="Save estimate"
+            workouts={
+              calculator.entry
+                ? []
+                : state.history
+                    .filter((h) => h.date === today && h.cardio)
+                    .map((h) => ({
+                      id: h.id,
+                      name: `${h.name} · ${durationLabel(h.cardio!)}`,
+                      cardio:
+                        state.stepEntries?.find((e) => e.id === h.id)?.input ||
+                        h.cardio!,
+                      included:
+                        state.stepEntries?.find((e) => e.id === h.id)
+                          ?.included || false,
+                    }))
+            }
+            onSave={(input, estimate, included, sourceId) => {
+              if (!estimate) return;
+              commit(
+                saveStepEntry(state, {
+                  id: calculator.entry?.id || sourceId || crypto.randomUUID(),
+                  date: today,
+                  input,
+                  estimate,
+                  included,
+                }),
+              );
+              setCalculator(null);
+              notify(
+                included
+                  ? "Step estimate saved in your daily total"
+                  : "Step estimate saved separately",
+              );
+            }}
+          />
+        </Modal>
+      )}
     </>
   );
 }
@@ -921,7 +1024,7 @@ function SessionLogger(props: {
   index: number;
   date: string;
   onClose: () => void;
-  onFinish: (session: Session) => void;
+  onFinish: (session: Session, entry?: StepEntry) => void;
 }) {
   return routines[props.index].exercises.length ? (
     <WorkoutLogger {...props} />
@@ -938,7 +1041,7 @@ function TreadmillLogger({
   index: number;
   date: string;
   onClose: () => void;
-  onFinish: (session: Session) => void;
+  onFinish: (session: Session, entry?: StepEntry) => void;
 }) {
   return (
     <Modal
@@ -948,93 +1051,32 @@ function TreadmillLogger({
       confirmClose
     >
       <p className="modal-intro">
-        Record what you completed. Use your treadmill display for speed and
-        distance. Steps are logged separately on Home.
+        Log your walk and preview estimated steps. Your workout earns the usual
+        120 XP.
       </p>
-      <form
-        className="form-stack"
-        onSubmit={(e) => {
-          e.preventDefault();
-          const data = new FormData(e.currentTarget);
-          onFinish({
-            id: crypto.randomUUID(),
-            date,
-            name: routines[index].name,
-            exercises: [],
-            xp: 120,
-            cardio: {
-              minutes: Number(data.get("minutes")),
-              ...(data.get("speed")
-                ? { speed: Number(data.get("speed")) }
-                : {}),
-              ...(data.get("distance")
-                ? { distance: Number(data.get("distance")) }
-                : {}),
-              ...(data.get("incline") !== ""
-                ? { incline: Number(data.get("incline")) }
-                : {}),
+      <TreadmillForm
+        submitLabel="Finish workout"
+        onSave={(cardio, estimate, included) => {
+          const id = crypto.randomUUID();
+          onFinish(
+            {
+              id,
+              date,
+              name: routines[index].name,
+              exercises: [],
+              xp: 120,
+              cardio,
             },
-          });
+            estimate
+              ? { id, date, input: cardio, estimate, included }
+              : undefined,
+          );
         }}
-      >
-        <label>
-          Minutes completed
-          <input
-            name="minutes"
-            type="number"
-            min="1"
-            max="300"
-            step="1"
-            required
-            placeholder="e.g. 20"
-          />
-        </label>
-        <div className="form-grid">
-          <label>
-            Speed (mph, optional)
-            <input
-              name="speed"
-              type="number"
-              min="0.1"
-              max="15"
-              step="0.1"
-              placeholder="e.g. 2.5"
-            />
-          </label>
-          <label>
-            Distance (miles, optional)
-            <input
-              name="distance"
-              type="number"
-              min="0.01"
-              max="50"
-              step="0.01"
-              placeholder="e.g. 0.8"
-            />
-          </label>
-        </div>
-        <label>
-          Incline (%, optional)
-          <input
-            name="incline"
-            type="number"
-            min="0"
-            max="40"
-            step="0.1"
-            placeholder="e.g. 4"
-          />
-        </label>
-        <p className="muted">
-          Start slowly, use your treadmill’s safety clip, and stop if you feel
-          unwell.
-        </p>
-        <button className="primary">
-          Finish workout <span>+120 XP</span>
-        </button>
-      </form>
+      />
     </Modal>
   );
 }
+
 function WorkoutLogger({
   index,
   date,
@@ -1044,7 +1086,7 @@ function WorkoutLogger({
   index: number;
   date: string;
   onClose: () => void;
-  onFinish: (session: Session) => void;
+  onFinish: (session: Session, entry?: StepEntry) => void;
 }) {
   const r = routines[index];
   const [sets, setSets] = useState(

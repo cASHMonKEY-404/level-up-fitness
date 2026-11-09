@@ -54,6 +54,7 @@ test("log actual workouts, meals and steps; persist XP and history", async ({
   await expect(
     page.getByRole("progressbar", { name: "Level XP progress" }),
   ).toHaveAttribute("aria-valuenow", "120");
+  await page.getByText("Enter a daily total instead", { exact: true }).click();
   await page.getByLabel("Today’s total steps").fill("8000");
   await page.getByRole("button", { name: "Save step total" }).click();
   await expect(

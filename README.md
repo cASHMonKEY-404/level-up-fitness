@@ -27,9 +27,9 @@ npm run preview     # Serve the production bundle
 - **Barcode entry:** camera scanning where `BarcodeDetector` and secure camera access are supported; manual UPC/EAN lookup otherwise. Product lookup uses Open Food Facts at `world.openfoodfacts.org` and needs Internet access. Results are per 100 g, require label review, and are never logged automatically. Incomplete results leave fields blank for manual completion; network failures allow manual entry. iPhone Safari may not support camera barcode detection.
 - **Local persistence:** the existing `levelup-react-v1` storage key and XP calculation are retained. Previous React app workouts, food records, steps, and XP remain intact. Older meals appear under Uncategorized, with unrecorded carbs/fat left unknown rather than fabricated. Plans, targets, and profile name are additive optional fields. Storage failure displays a warning. No accounts, backend, cloud backup, or health-device sync. The original uploaded HTML prototype's separate storage is not migrated.
 
-All actual tracking starts at zero on a new browser. Suggested routines, durations, default weekly recommendations, and 2 × 12 sets are not tracked activity. Steps are a manually entered daily total. You can log completed workouts and meals for today or past dates using the calendars.
+All actual tracking starts at zero on a new browser. Suggested routines, durations, default weekly recommendations, and 2 × 12 sets are not tracked activity. Steps can be entered as a daily total or explicitly added from labeled treadmill estimates. You can log completed workouts and meals for today or past dates using the calendars.
 
-**XP rules:** 120 per logged workout with at least one completed set, 25 for the first meal on each local calendar day, and 50 for a daily total of at least 8,000 steps. XP is derived from saved records; correcting a step total below the goal removes that day's step bonus. Every 500 XP advances one level. Daily quests reset by date without erasing history.
+**XP rules:** 120 per logged strength workout with at least one completed set or completed treadmill session, 25 for the first meal on each local calendar day, and 50 for a daily total of at least 8,000 steps. XP is derived from saved records; correcting a step total below the goal removes that day's step bonus. Every 500 XP advances one level. Daily quests reset by date without erasing history.
 
 ## Browser tests
 
@@ -54,4 +54,16 @@ Data is stored under `levelup-react-v1` in localStorage on your device. Clearing
 
 `src/style.css` defines shared tokens for color, spacing, typography, radii, and shadows. `src/components.tsx` provides reusable cards, progress bars/rings, calendars, modal focus management, history rows, and original workout/food/badge illustrations. Layouts use desktop navigation and a fixed three-tab mobile bar, safe-area spacing, visible keyboard focus, and reduced-motion support. No external artwork or font download is needed.
 
-Treadmill workouts log actual minutes with optional speed (mph), distance (miles), and incline (%), and receive the existing 120 XP session reward. They do not estimate steps or calories. Existing recorded sessions are preserved. The default weekly suggestions use strength on Monday/Wednesday/Friday, walking on Tuesday/Thursday, and recovery on weekends; you can swap or reschedule any day.
+Treadmill workouts log minutes and seconds with optional speed (mph), distance (miles), incline (%), and treadmill-reported calories, and receive the existing 120 XP session reward. A shared step calculator is available on Home and during treadmill logging. Calorie values are machine estimates; the app does not calculate calorie burn. Existing recorded sessions are preserved. The default weekly suggestions use strength on Monday/Wednesday/Friday, walking on Tuesday/Thursday, and recovery on weekends; you can swap or reschedule any day.
+
+## Treadmill step estimates
+
+The Home Steps card offers **Calculate treadmill steps** and a separate manual daily-total entry. Save a calculation separately or explicitly include it in that day's count. Home calculations do not award workout XP. Treadmill logging can also save an estimate and optionally include it in the daily count.
+
+- **Distance method:** steps = miles × 63,360 ÷ step length in inches. The adjustable 28-inch default is a generic starting estimate, not a personalized measurement. Use displayed distance when provided; otherwise distance is average speed (mph) × elapsed hours.
+- **Cadence method:** steps = measured steps/minute × (minutes + seconds ÷ 60). Count every footfall at the same pace and incline for a personal estimate.
+- Incline and displayed calories are stored but do not directly enter the step formula. No exact step count can be recovered from them.
+- The example 2.74 miles with a 28-inch step length estimates 6,200 steps. A measured cadence of 110 over 54:20 estimates 5,977 instead. Both are labeled estimates.
+- Saved estimates can be edited. Their contribution is replaced by record ID instead of repeatedly added. Reusing a saved workout in Home uses the same record ID.
+- A manual/device daily total replaces that day's total and resets separate estimate contributions. Do not add a treadmill estimate if the device total already includes that walk. The 8,000-step XP rule is unchanged and derives from the final daily total.
+- Existing local records are retained under the same storage key. `stepEntries` is an additive optional collection; older workouts remain usable without estimation data.

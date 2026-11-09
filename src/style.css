@@ -4373,3 +4373,112 @@ textarea {
 .app-shell .achievement-card small {
   margin-top: 8px;
 }
+
+.app-shell .activity-details .primary {
+  padding: 12px 14px;
+  font-size: 14px;
+  white-space: normal;
+}
+.manual-steps {
+  margin-top: 8px;
+}
+.manual-steps > summary {
+  cursor: pointer;
+  color: var(--primary-dark);
+  font-size: 12px;
+  padding: 10px 0;
+  min-height: 44px;
+}
+.manual-steps .step-form {
+  margin: 8px 0;
+}
+.manual-steps > small {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  display: block;
+}
+.app-shell .step-result {
+  padding: 20px;
+  background: #f4effa;
+  border: 1px solid #e8dff1;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app-shell .step-result > span {
+  font-size: 14px;
+}
+.app-shell .step-result > strong {
+  font-size: 32px;
+  color: var(--primary-dark);
+}
+.app-shell .step-result > small,
+.app-shell .field-hint,
+.app-shell .calculator-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.field-hint {
+  display: block;
+  margin-top: 8px;
+}
+.app-shell .check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.check-label input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  min-height: 0;
+  margin: 0;
+  flex-shrink: 0;
+  accent-color: var(--primary);
+}
+.step-entry-list {
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.step-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+.step-entry > span {
+  font-size: 13px;
+}
+.step-entry small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.step-entry > span:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-dark);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .app-shell .activity-details .primary {
+    font-size: 13px;
+  }
+  .manual-steps > summary {
+    font-size: 12px;
+  }
+  .step-entry > span {
+    font-size: 12px;
+  }
+}

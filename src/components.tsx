@@ -1,3 +1,4 @@
+import { durationLabel } from "./steps";
 import { useEffect, useId, useRef, type ReactNode } from "react";
 import {
   Check,
@@ -562,7 +563,7 @@ export function History({
                 <small>
                   {formatDay(h.date)} ·{" "}
                   {h.cardio
-                    ? `${h.cardio.minutes} min walk`
+                    ? `${durationLabel(h.cardio)} walk`
                     : `${h.exercises.reduce((n, e) => n + e.sets.length, 0)} sets logged`}
                 </small>
               </span>
@@ -572,7 +573,9 @@ export function History({
             <div className="history-sets">
               {h.cardio && (
                 <p>
-                  {h.cardio.minutes} minutes
+                  {h.cardio.seconds
+                    ? `${durationLabel(h.cardio)} elapsed`
+                    : `${h.cardio.minutes} minutes`}
                   {h.cardio.speed !== undefined
                     ? ` · ${h.cardio.speed} mph`
                     : ""}
@@ -581,6 +584,9 @@ export function History({
                     : ""}
                   {h.cardio.incline !== undefined
                     ? ` · ${h.cardio.incline}% incline`
+                    : ""}
+                  {h.cardio.calories !== undefined
+                    ? ` · ${h.cardio.calories} kcal (treadmill estimate)`
                     : ""}
                 </p>
               )}

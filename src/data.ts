@@ -23,7 +23,12 @@ export type Session = {
   name: string;
   exercises: { name: string; sets: SetEntry[] }[];
   xp: number;
-  cardio?: { minutes: number; speed?: number; distance?: number };
+  cardio?: {
+    minutes: number;
+    speed?: number;
+    distance?: number;
+    incline?: number;
+  };
 };
 export type Food = {
   id: string;

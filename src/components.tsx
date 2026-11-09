@@ -579,6 +579,9 @@ export function History({
                   {h.cardio.distance !== undefined
                     ? ` · ${h.cardio.distance} miles`
                     : ""}
+                  {h.cardio.incline !== undefined
+                    ? ` · ${h.cardio.incline}% incline`
+                    : ""}
                 </p>
               )}
               {h.exercises.map((e, i) => (

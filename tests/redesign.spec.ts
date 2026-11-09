@@ -296,15 +296,14 @@ test("home equipment routines and treadmill history persist without estimated st
   await page.getByLabel("Minutes completed").fill("20");
   await page.getByLabel("Speed (mph, optional)").fill("2.5");
   await page.getByLabel("Distance (miles, optional)").fill("0.83");
-  await page
-    .getByRole("button", { name: "Finish workout" })
-    .click();
+  await page.getByLabel("Incline (%, optional)").fill("4");
+  await page.getByRole("button", { name: "Finish workout" }).click();
   await expect(
     page.getByRole("progressbar", { name: "Level XP progress" }),
   ).toHaveAttribute("aria-valuenow", "120");
   await page.locator("summary").filter({ hasText: "Treadmill walk" }).click();
   await expect(
-    page.getByText("20 minutes · 2.5 mph · 0.83 miles"),
+    page.getByText("20 minutes · 2.5 mph · 0.83 miles · 4% incline"),
   ).toBeVisible();
   await page.reload();
   const state = await page.evaluate(() =>
@@ -314,6 +313,7 @@ test("home equipment routines and treadmill history persist without estimated st
     minutes: 20,
     speed: 2.5,
     distance: 0.83,
+    incline: 4,
   });
   expect(state.steps).toEqual({});
   await expect(

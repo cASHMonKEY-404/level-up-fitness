@@ -970,6 +970,9 @@ function TreadmillLogger({
               ...(data.get("distance")
                 ? { distance: Number(data.get("distance")) }
                 : {}),
+              ...(data.get("incline") !== ""
+                ? { incline: Number(data.get("incline")) }
+                : {}),
             },
           });
         }}
@@ -1010,6 +1013,17 @@ function TreadmillLogger({
             />
           </label>
         </div>
+        <label>
+          Incline (%, optional)
+          <input
+            name="incline"
+            type="number"
+            min="0"
+            max="40"
+            step="0.1"
+            placeholder="e.g. 4"
+          />
+        </label>
         <p className="muted">
           Start slowly, use your treadmill’s safety clip, and stop if you feel
           unwell.

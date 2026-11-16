@@ -1,0 +1,79 @@
+# Screen index
+
+- **Core** · `welcome` · LEVEL UP
+- **Core** · `today` · Your day, in motion.
+- **Core** · `steps` · Daily steps
+- **Core** · `steps-saved` · Daily steps
+- **Core** · `steps-added` · Daily steps
+- **Core** · `steps-manual` · Daily steps
+- **Logging** · `add-walk` · Add walk
+- **Logging** · `edit-walk` · Edit walk
+- **Logging** · `walk-estimate` · Estimated steps
+- **Logging** · `walk-estimate-included` · Estimated steps
+- **Logging** · `walk-cadence` · Measured cadence
+- **Logging** · `manual-steps` · Set daily steps
+- **Workouts** · `workouts` · Choose a workout
+- **Workouts** · `schedule` · Workout schedule
+- **Workouts** · `edit-plan` · Edit workout plan
+- **Workouts** · `upper` · Workout
+- **Workouts** · `full` · Workout
+- **Workouts** · `lower` · Workout
+- **Workouts** · `cardio` · Cardio
+- **Exercise details** · `exercise-0` · Floor chest press
+- **Exercise guidance** · `guide-0` · Floor chest press · form
+- **Exercise details** · `exercise-1` · Bicep curl
+- **Exercise guidance** · `guide-1` · Bicep curl · form
+- **Exercise details** · `exercise-2` · Shoulder press
+- **Exercise guidance** · `guide-2` · Shoulder press · form
+- **Exercise details** · `exercise-3` · Bent-over row
+- **Exercise guidance** · `guide-3` · Bent-over row · form
+- **Exercise details** · `exercise-4` · Goblet squat
+- **Exercise guidance** · `guide-4` · Goblet squat · form
+- **Exercise details** · `exercise-5` · Kettlebell deadlift
+- **Exercise guidance** · `guide-5` · Kettlebell deadlift · form
+- **Exercise details** · `exercise-6` · Seated band row
+- **Exercise guidance** · `guide-6` · Seated band row · form
+- **Exercise details** · `exercise-7` · Band pull-apart
+- **Exercise guidance** · `guide-7` · Band pull-apart · form
+- **Exercise details** · `exercise-8` · Lateral band walk
+- **Exercise guidance** · `guide-8` · Lateral band walk · form
+- **Exercise details** · `exercise-9` · Dead bug
+- **Exercise guidance** · `guide-9` · Dead bug · form
+- **Exercise details** · `exercise-10` · Glute bridge
+- **Exercise guidance** · `guide-10` · Glute bridge · form
+- **Workout completion** · `finish-partial` · Finish this workout?
+- **Workout completion** · `finish-workout` · Save your workout
+- **Workout completion** · `workout-complete` · Workout saved
+- **Nutrition** · `nutrition` · Nutrition
+- **Nutrition** · `meal-menu` · Log food
+- **Food logging** · `custom-food` · Add custom food
+- **Food logging** · `food-portion` · Adjust your portion
+- **Food logging** · `scanned-food` · Review product label
+- **Food logging** · `edit-food` · Edit food entry
+- **Food logging** · `food-log` · Today’s food log
+- **Food logging** · `food-history` · Recently logged
+- **Food logging** · `saved-foods` · Saved foods
+- **Food logging** · `food-search` · Search foods
+- **Scanning** · `scan` · Scan barcode
+- **Scanning** · `barcode-manual` · Enter barcode
+- **States** · `scan-permission` · Camera unavailable
+- **States** · `scan-not-found` · No product found
+- **States** · `scan-incomplete` · Some values are missing
+- **States** · `network-error` · Couldn’t connect
+- **States** · `scan-loading` · Looking up product…
+- **History & settings** · `settings` · History & settings
+- **History & settings** · `targets` · Your daily goals
+- **History & settings** · `workout-history` · Activity history
+- **History & settings** · `nutrition-history` · Nutrition history
+- **History & settings** · `achievements` · Your progress
+- **States** · `level-up` · Level 2 unlocked
+- **History & settings** · `data-info` · Your data
+- **States** · `empty-today` · Your first day
+- **States** · `empty-workouts` · No workouts yet
+- **States** · `empty-food` · No food logged
+- **States** · `delete-walk` · Delete this walk?
+- **States** · `delete-food` · Delete this food?
+- **States** · `unsaved` · Discard changes?
+- **States** · `storage-error` · Your changes aren’t saved
+- **Handoff** · `design-system` · Design system
+- **Handoff** · `review-notes` · Review & implementation notes

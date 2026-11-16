@@ -2,7 +2,7 @@ LEVEL UP — classic stick-figure exercise pictograms
 
 12 original monochrome SVG icons plus a labeled vector preview.
 
-The same reference-style person appears throughout: a round head, solid rounded torso, uniform rounded limbs, no hands, no feet, no face, and no clothing detail. A shared rig keeps the arm and leg lengths consistent across poses. Upright figures are about seven heads tall; bent and seated poses naturally have shorter silhouettes. The exercise poses are newly drawn for the exact twelve app movements, rather than copied poses from the reference sheet.
+The same reference-style person appears throughout: a round head, solid rounded torso, uniform rounded limbs, no hands, no feet, no face, and no clothing detail. A shared rig keeps the arm and leg lengths consistent across poses. The torso and limbs are 10% shorter than the preceding version, with head size and stroke weight unchanged. Upright figures are about six-and-a-half to seven heads tall; bent and seated poses naturally have shorter silhouettes. The exercise poses are newly drawn for the exact twelve app movements, rather than copied poses from the reference sheet.
 
 These remain simplified exercise identifiers, not anatomical diagrams or form instructions. Each pose is built from the same proportions rather than independently stretching the limbs.
 

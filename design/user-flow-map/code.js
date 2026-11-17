@@ -11178,8 +11178,8 @@ async function run(){
   number:find(source.workout,s=>s.startsWith('0 / 5')||s.startsWith('2 / 5')),
   large:find(source.steps,s=>s==='6,240'),
   button:find(source.workout,s=>s==='finish workout'),
-  buttonPurple:find(source.walk,s=>s==='add'),
-  buttonPink:find(source.custom,s=>s==='add')
+  buttonPurple:find(source.walk,s=>s==='add')||find(source.steps,s=>s==='add')||find(source.custom,s=>s==='add')||find(source.workout,s=>s==='finish workout'),
+  buttonPink:find(source.custom,s=>s==='add')||find(source.nutrition,s=>s==='log food')||find(source.workout,s=>s==='finish workout')
  };
  for(const key of Object.keys(role))if(!role[key])throw Error('The original '+key+' text style was not found. No pages have been changed.');
  const allText=Object.values(source).flatMap(texts);const fonts=new Map();

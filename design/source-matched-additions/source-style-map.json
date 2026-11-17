@@ -1,0 +1,38 @@
+{
+  "source": "Level UP App.pdf",
+  "sourcePageSize": [
+    3924,
+    6539
+  ],
+  "frameWidth": 375,
+  "sourceMeasurements": {
+    "pageMargin": 24,
+    "cardRadius": 20,
+    "rowRadius": 14,
+    "inputRadius": 10,
+    "primaryButtonHeight": 48,
+    "primaryButtonRadius": 14,
+    "walkButtonRadius": 24,
+    "titleSize": 28,
+    "rowTitleSize": 18,
+    "labelSize": 11,
+    "fieldValueSize": 18
+  },
+  "colors": {
+    "bg": "#050505",
+    "card": "#151515",
+    "row": "#222222",
+    "icon": "#2D2D2D",
+    "muted": "#A79DAF",
+    "secondary": "#7E728A",
+    "line": "#353039",
+    "white": "#FFFFFF",
+    "purple": "#6600FF",
+    "green": "#5DFF00",
+    "pink": "#E24EFF",
+    "blue": "#4C8EFF",
+    "orange": "#FF9900",
+    "yellow": "#F5E900"
+  },
+  "policy": "Original source screens are unchanged. Additions only. Figma importer uses original text fonts and styles, not a font substitution."
+}

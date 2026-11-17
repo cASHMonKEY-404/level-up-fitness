@@ -1,3 +1,5 @@
+> **Superseded:** This earlier kit was not approved as the source design. Use [`../source-matched-additions/README.md`](../source-matched-additions/README.md), which extends the uploaded PDF patterns and preserves the original Figma frames.
+
 # LEVEL UP — Complete Figma design kit
 
 This kit follows the supplied dark design direction with purple Steps, green Workouts, magenta Nutrition and category colors for the macros. It contains **77 editable iPhone screen designs**, a Figma importer, SVG exports, original icons, reusable components, and prototype destinations. All values are sample design data. App code and the original Figma file have not been modified.

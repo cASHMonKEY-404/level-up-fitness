@@ -1,0 +1,40 @@
+# Source-matched additions
+
+- `full-body` — **Workout** — source pattern: workout
+- `lower-body` — **Workout** — source pattern: workout
+- `cardio` — **Workout** — source pattern: workout
+- `exercise-0` — **Floor chest press** — source pattern: workout
+- `exercise-1` — **Bicep curl** — source pattern: workout
+- `exercise-2` — **Shoulder press** — source pattern: workout
+- `exercise-3` — **Bent-over row** — source pattern: workout
+- `exercise-4` — **Goblet squat** — source pattern: workout
+- `exercise-5` — **Kettlebell deadlift** — source pattern: workout
+- `exercise-6` — **Seated band row** — source pattern: workout
+- `exercise-7` — **Band pull-apart** — source pattern: workout
+- `exercise-8` — **Lateral band walk** — source pattern: workout
+- `exercise-9` — **Dead bug** — source pattern: workout
+- `exercise-10` — **Glute bridge** — source pattern: workout
+- `walk-details` — **Daily steps** — source pattern: steps
+- `walk-estimate` — **Daily steps** — source pattern: steps
+- `walk-cadence` — **Daily steps** — source pattern: steps
+- `manual-steps` — **Daily steps** — source pattern: steps
+- `edit-walk` — **Daily steps** — source pattern: steps
+- `food-portion` — **Nutrition info** — source pattern: custom
+- `edit-food` — **Edit Nutrition** — source pattern: custom
+- `targets` — **Daily goals** — source pattern: custom
+- `schedule` — **Workout** — source pattern: workout
+- `edit-plan` — **Edit workout** — source pattern: workout
+- `finish-partial` — **Finish workout** — source pattern: workout
+- `workout-saved` — **Workout complete** — source pattern: workout
+- `empty-workout` — **Workout** — source pattern: workout
+- `empty-food` — **Nutrition** — source pattern: nutrition
+- `empty-steps` — **Daily steps** — source pattern: steps
+- `camera-denied` — **Scan** — source pattern: scan
+- `scan-not-found` — **Scan** — source pattern: scan
+- `scan-loading` — **Scan** — source pattern: scan
+- `network-error` — **Scan** — source pattern: scan
+- `storage-error` — **Today** — source pattern: steps
+- `delete-record` — **History** — source pattern: history
+- `unsaved` — **Nutrition info** — source pattern: custom
+- `barcode-manual` — **Scan** — source pattern: scan
+- `progress` — **Progress** — source pattern: steps

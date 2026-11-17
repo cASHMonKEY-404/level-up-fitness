@@ -1,0 +1,1832 @@
+{
+  "originals": [
+    {
+      "id": "welcome",
+      "name": "Welcome",
+      "bounds": [
+        339,
+        385,
+        714,
+        1197
+      ],
+      "labels": [
+        "A LITTLE BETTER. EVERY DAY."
+      ]
+    },
+    {
+      "id": "today",
+      "name": "Today",
+      "bounds": [
+        955,
+        385,
+        1330,
+        1237
+      ],
+      "labels": [
+        "Your day, in motion."
+      ]
+    },
+    {
+      "id": "steps",
+      "name": "Daily steps",
+      "bounds": [
+        1591,
+        385,
+        1966,
+        1277
+      ],
+      "labels": [
+        "Daily steps",
+        "This week"
+      ]
+    },
+    {
+      "id": "walk-blank",
+      "name": "Add walk \u00b7 empty",
+      "bounds": [
+        2043,
+        385,
+        2418,
+        1197
+      ],
+      "labels": [
+        "Add walk",
+        "0 mins"
+      ]
+    },
+    {
+      "id": "walk-filled",
+      "name": "Add walk \u00b7 filled",
+      "bounds": [
+        2495,
+        385,
+        2870,
+        1197
+      ],
+      "labels": [
+        "Add walk",
+        "15 mins"
+      ]
+    },
+    {
+      "id": "steps-saved",
+      "name": "Daily steps \u00b7 saved",
+      "bounds": [
+        2947,
+        385,
+        3322,
+        1431
+      ],
+      "labels": [
+        "Daily steps",
+        "Session 01"
+      ]
+    },
+    {
+      "id": "workout",
+      "name": "Workout \u00b7 start",
+      "bounds": [
+        1591,
+        1528,
+        1966,
+        2340
+      ],
+      "labels": [
+        "Upper body workout",
+        "0 / 5"
+      ]
+    },
+    {
+      "id": "workout-partial",
+      "name": "Workout \u00b7 in progress",
+      "bounds": [
+        2043,
+        1528,
+        2418,
+        2340
+      ],
+      "labels": [
+        "Upper body workout",
+        "2 / 5"
+      ]
+    },
+    {
+      "id": "nutrition",
+      "name": "Nutrition",
+      "bounds": [
+        1591,
+        2591,
+        1966,
+        3818
+      ],
+      "labels": [
+        "Nutrition",
+        "Food log",
+        "Log food"
+      ]
+    },
+    {
+      "id": "meal-menu",
+      "name": "Meal category",
+      "bounds": [
+        2043,
+        2591,
+        2418,
+        3403
+      ],
+      "labels": [
+        "Meal Category",
+        "Custom Creation"
+      ]
+    },
+    {
+      "id": "custom",
+      "name": "Custom nutrition",
+      "bounds": [
+        2495,
+        2591,
+        2870,
+        3556
+      ],
+      "labels": [
+        "Add Custom Nutrition"
+      ]
+    },
+    {
+      "id": "history",
+      "name": "Food history",
+      "bounds": [
+        2495,
+        3646,
+        2870,
+        4458
+      ],
+      "labels": [
+        "History",
+        "BREAKFAST",
+        "LUNCH"
+      ]
+    },
+    {
+      "id": "scan",
+      "name": "Scan",
+      "bounds": [
+        2495,
+        4548,
+        2870,
+        5360
+      ],
+      "labels": [
+        "Scan"
+      ]
+    },
+    {
+      "id": "food-info",
+      "name": "Nutrition info",
+      "bounds": [
+        3002,
+        4548,
+        3377,
+        5513
+      ],
+      "labels": [
+        "Nutrition info"
+      ]
+    },
+    {
+      "id": "saved-foods",
+      "name": "Saved foods",
+      "bounds": [
+        2495,
+        5450,
+        2870,
+        6262
+      ],
+      "labels": [
+        "Saved",
+        "BREAKFAST",
+        "LUNCH"
+      ]
+    }
+  ],
+  "positions": {
+    "welcome": [
+      0,
+      0
+    ],
+    "today": [
+      550,
+      0
+    ],
+    "steps": [
+      1200,
+      0
+    ],
+    "walk-blank": [
+      1720,
+      0
+    ],
+    "walk-filled": [
+      2240,
+      0
+    ],
+    "steps-saved": [
+      2760,
+      0
+    ],
+    "edit-walk": [
+      3280,
+      0
+    ],
+    "empty-steps": [
+      1200,
+      1300
+    ],
+    "walk-details": [
+      1720,
+      1300
+    ],
+    "walk-estimate": [
+      2240,
+      1300
+    ],
+    "walk-cadence": [
+      2760,
+      1300
+    ],
+    "manual-steps": [
+      3280,
+      1300
+    ],
+    "workout": [
+      1200,
+      2700
+    ],
+    "workout-partial": [
+      1720,
+      2700
+    ],
+    "exercise-0": [
+      2240,
+      2700
+    ],
+    "exercise-1": [
+      2760,
+      2700
+    ],
+    "exercise-2": [
+      3280,
+      2700
+    ],
+    "exercise-3": [
+      3800,
+      2700
+    ],
+    "exercise-4": [
+      4320,
+      2700
+    ],
+    "exercise-5": [
+      4840,
+      2700
+    ],
+    "full-body": [
+      1200,
+      3900
+    ],
+    "lower-body": [
+      1720,
+      3900
+    ],
+    "cardio": [
+      2240,
+      3900
+    ],
+    "exercise-6": [
+      2760,
+      3900
+    ],
+    "exercise-7": [
+      3280,
+      3900
+    ],
+    "exercise-8": [
+      3800,
+      3900
+    ],
+    "exercise-9": [
+      4320,
+      3900
+    ],
+    "exercise-10": [
+      4840,
+      3900
+    ],
+    "schedule": [
+      1200,
+      5200
+    ],
+    "edit-plan": [
+      1720,
+      5200
+    ],
+    "finish-partial": [
+      2240,
+      5200
+    ],
+    "workout-saved": [
+      2760,
+      5200
+    ],
+    "empty-workout": [
+      3280,
+      5200
+    ],
+    "progress": [
+      3800,
+      5200
+    ],
+    "nutrition": [
+      1200,
+      6600
+    ],
+    "meal-menu": [
+      1720,
+      6600
+    ],
+    "custom": [
+      2240,
+      6600
+    ],
+    "history": [
+      2760,
+      6600
+    ],
+    "scan": [
+      3280,
+      6600
+    ],
+    "food-info": [
+      3800,
+      6600
+    ],
+    "saved-foods": [
+      4320,
+      6600
+    ],
+    "barcode-manual": [
+      4840,
+      6600
+    ],
+    "targets": [
+      1200,
+      8000
+    ],
+    "empty-food": [
+      1720,
+      8000
+    ],
+    "food-portion": [
+      2240,
+      8000
+    ],
+    "edit-food": [
+      2760,
+      8000
+    ],
+    "camera-denied": [
+      3280,
+      8000
+    ],
+    "scan-not-found": [
+      3800,
+      8000
+    ],
+    "scan-loading": [
+      4320,
+      8000
+    ],
+    "network-error": [
+      4840,
+      8000
+    ],
+    "delete-record": [
+      1200,
+      9400
+    ],
+    "unsaved": [
+      1720,
+      9400
+    ],
+    "storage-error": [
+      2240,
+      9400
+    ]
+  },
+  "edges": [
+    {
+      "source": "welcome",
+      "target": "today",
+      "label": "Continue",
+      "region": [
+        0,
+        0,
+        375,
+        812
+      ]
+    },
+    {
+      "source": "today",
+      "target": "steps",
+      "label": "Daily steps",
+      "region": [
+        24,
+        160,
+        327,
+        210
+      ]
+    },
+    {
+      "source": "today",
+      "target": "workout",
+      "label": "Today\u2019s workout",
+      "region": [
+        24,
+        380,
+        327,
+        170
+      ]
+    },
+    {
+      "source": "today",
+      "target": "nutrition",
+      "label": "Daily nutrition",
+      "region": [
+        24,
+        570,
+        327,
+        230
+      ]
+    },
+    {
+      "source": "steps",
+      "target": "walk-blank",
+      "label": "Add walk",
+      "region": [
+        20,
+        650,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-blank",
+      "target": "walk-filled",
+      "label": "Example entered",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-filled",
+      "target": "steps-saved",
+      "label": "Add",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "steps-saved",
+      "target": "edit-walk",
+      "label": "Edit session",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-blank",
+      "target": "walk-details",
+      "label": "Distance / details",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-details",
+      "target": "walk-estimate",
+      "label": "Estimate steps",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-estimate",
+      "target": "walk-cadence",
+      "label": "Use cadence",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "steps",
+      "target": "manual-steps",
+      "label": "Manual total",
+      "region": [
+        20,
+        650,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "empty-steps",
+      "target": "walk-blank",
+      "label": "Add first walk",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "edit-walk",
+      "target": "steps-saved",
+      "label": "Save changes",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "manual-steps",
+      "target": "steps",
+      "label": "Save total",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-estimate",
+      "target": "steps",
+      "label": "Save estimate",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "walk-cadence",
+      "target": "steps",
+      "label": "Save cadence",
+      "region": [
+        20,
+        730,
+        335,
+        48
+      ]
+    },
+    {
+      "source": "workout",
+      "target": "exercise-0",
+      "label": "Open exercise",
+      "region": [
+        24,
+        356,
+        327,
+        101
+      ]
+    },
+    {
+      "source": "exercise-0",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "workout-partial",
+      "target": "finish-partial",
+      "label": "Finish workout",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "finish-partial",
+      "target": "workout-saved",
+      "label": "Save completed sets",
+      "region": [
+        24,
+        650,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "workout-saved",
+      "target": "today",
+      "label": "Done",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "workout",
+      "target": "schedule",
+      "label": "View schedule",
+      "region": [
+        260,
+        139,
+        90,
+        60
+      ]
+    },
+    {
+      "source": "schedule",
+      "target": "edit-plan",
+      "label": "Edit plan",
+      "region": [
+        24,
+        700,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "edit-plan",
+      "target": "schedule",
+      "label": "Save plan",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "today",
+      "target": "progress",
+      "label": "Level and achievements",
+      "region": [
+        24,
+        100,
+        327,
+        40
+      ]
+    },
+    {
+      "source": "empty-workout",
+      "target": "schedule",
+      "label": "Plan workout",
+      "region": [
+        24,
+        650,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-1",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-2",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-3",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-4",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-5",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-6",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-7",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-8",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-9",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "exercise-10",
+      "target": "workout-partial",
+      "label": "Save sets",
+      "region": [
+        24,
+        730,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "schedule",
+      "target": "full-body",
+      "label": "Choose full-body",
+      "region": [
+        24,
+        300,
+        327,
+        90
+      ]
+    },
+    {
+      "source": "schedule",
+      "target": "lower-body",
+      "label": "Choose lower-body",
+      "region": [
+        24,
+        410,
+        327,
+        90
+      ]
+    },
+    {
+      "source": "schedule",
+      "target": "cardio",
+      "label": "Choose cardio",
+      "region": [
+        24,
+        520,
+        327,
+        90
+      ]
+    },
+    {
+      "source": "full-body",
+      "target": "exercise-4",
+      "label": "Open exercise",
+      "region": [
+        24,
+        356,
+        327,
+        101
+      ]
+    },
+    {
+      "source": "lower-body",
+      "target": "exercise-5",
+      "label": "Open exercise",
+      "region": [
+        24,
+        356,
+        327,
+        101
+      ]
+    },
+    {
+      "source": "cardio",
+      "target": "walk-details",
+      "label": "Open exercise",
+      "region": [
+        24,
+        356,
+        327,
+        101
+      ]
+    },
+    {
+      "source": "nutrition",
+      "target": "meal-menu",
+      "label": "Log food",
+      "region": [
+        24,
+        1145,
+        327,
+        48
+      ]
+    },
+    {
+      "source": "meal-menu",
+      "target": "custom",
+      "label": "Custom creation",
+      "region": [
+        24,
+        580,
+        155,
+        90
+      ]
+    },
+    {
+      "source": "meal-menu",
+      "target": "history",
+      "label": "History",
+      "region": [
+        189,
+        580,
+        155,
+        90
+      ]
+    },
+    {
+      "source": "meal-menu",
+      "target": "saved-foods",
+      "label": "Saved",
+      "region": [
+        24,
+        680,
+        155,
+        90
+      ]
+    },
+    {
+      "source": "meal-menu",
+      "target": "scan",
+      "label": "Scan",
+      "region": [
+        189,
+        680,
+        155,
+        90
+      ]
+    },
+    {
+      "source": "custom",
+      "target": "food-portion",
+      "label": "Set serving",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "history",
+      "target": "food-portion",
+      "label": "Select food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "saved-foods",
+      "target": "food-portion",
+      "label": "Select saved food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan",
+      "target": "food-info",
+      "label": "Recognized barcode",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan",
+      "target": "camera-denied",
+      "label": "Camera denied",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan",
+      "target": "scan-not-found",
+      "label": "Unknown barcode",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan",
+      "target": "scan-loading",
+      "label": "Looking up food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan-loading",
+      "target": "network-error",
+      "label": "Lookup failed",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "camera-denied",
+      "target": "barcode-manual",
+      "label": "Enter barcode",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "scan-not-found",
+      "target": "custom",
+      "label": "Create food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "barcode-manual",
+      "target": "food-info",
+      "label": "Lookup",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "food-info",
+      "target": "food-portion",
+      "label": "Adjust serving",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "food-portion",
+      "target": "nutrition",
+      "label": "Add food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "edit-food",
+      "target": "nutrition",
+      "label": "Save changes",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "nutrition",
+      "target": "edit-food",
+      "label": "Edit logged food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "nutrition",
+      "target": "targets",
+      "label": "Edit targets",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "targets",
+      "target": "nutrition",
+      "label": "Save targets",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "empty-food",
+      "target": "meal-menu",
+      "label": "Log first food",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "network-error",
+      "target": "scan",
+      "label": "Retry",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "edit-food",
+      "target": "delete-record",
+      "label": "Delete",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "delete-record",
+      "target": "nutrition",
+      "label": "Confirm deletion",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "custom",
+      "target": "unsaved",
+      "label": "Leave with edits",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "unsaved",
+      "target": "custom",
+      "label": "Keep editing",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "storage-error",
+      "target": "today",
+      "label": "Return home",
+      "region": [
+        0,
+        44,
+        375,
+        70
+      ]
+    },
+    {
+      "source": "steps",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "walk-blank",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "walk-filled",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "steps-saved",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "edit-walk",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "empty-steps",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "walk-details",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "walk-estimate",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "walk-cadence",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "manual-steps",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "workout",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "workout-partial",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-0",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-1",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-2",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-3",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-4",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-5",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "full-body",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "lower-body",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "cardio",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-6",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-7",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-8",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-9",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "exercise-10",
+      "target": "workout",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "schedule",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "edit-plan",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "finish-partial",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "workout-saved",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "empty-workout",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "progress",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "nutrition",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "meal-menu",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "custom",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "history",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "scan",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "food-info",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "saved-foods",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "barcode-manual",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "targets",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "empty-food",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "food-portion",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "edit-food",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "camera-denied",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "scan-not-found",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "scan-loading",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "network-error",
+      "target": "nutrition",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "delete-record",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "unsaved",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    },
+    {
+      "source": "storage-error",
+      "target": "today",
+      "label": "Back",
+      "region": [
+        16,
+        44,
+        110,
+        32
+      ],
+      "back": true
+    }
+  ]
+}

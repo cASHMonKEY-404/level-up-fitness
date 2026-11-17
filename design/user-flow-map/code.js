@@ -1,0 +1,11269 @@
+const FLOW={"originals": [{"id": "welcome", "name": "Welcome", "bounds": [339, 385, 714, 1197], "labels": ["A LITTLE BETTER. EVERY DAY."]}, {"id": "today", "name": "Today", "bounds": [955, 385, 1330, 1237], "labels": ["Your day, in motion."]}, {"id": "steps", "name": "Daily steps", "bounds": [1591, 385, 1966, 1277], "labels": ["Daily steps", "This week"]}, {"id": "walk-blank", "name": "Add walk \u00b7 empty", "bounds": [2043, 385, 2418, 1197], "labels": ["Add walk", "0 mins"]}, {"id": "walk-filled", "name": "Add walk \u00b7 filled", "bounds": [2495, 385, 2870, 1197], "labels": ["Add walk", "15 mins"]}, {"id": "steps-saved", "name": "Daily steps \u00b7 saved", "bounds": [2947, 385, 3322, 1431], "labels": ["Daily steps", "Session 01"]}, {"id": "workout", "name": "Workout \u00b7 start", "bounds": [1591, 1528, 1966, 2340], "labels": ["Upper body workout", "0 / 5"]}, {"id": "workout-partial", "name": "Workout \u00b7 in progress", "bounds": [2043, 1528, 2418, 2340], "labels": ["Upper body workout", "2 / 5"]}, {"id": "nutrition", "name": "Nutrition", "bounds": [1591, 2591, 1966, 3818], "labels": ["Nutrition", "Food log", "Log food"]}, {"id": "meal-menu", "name": "Meal category", "bounds": [2043, 2591, 2418, 3403], "labels": ["Meal Category", "Custom Creation"]}, {"id": "custom", "name": "Custom nutrition", "bounds": [2495, 2591, 2870, 3556], "labels": ["Add Custom Nutrition"]}, {"id": "history", "name": "Food history", "bounds": [2495, 3646, 2870, 4458], "labels": ["History", "BREAKFAST", "LUNCH"]}, {"id": "scan", "name": "Scan", "bounds": [2495, 4548, 2870, 5360], "labels": ["Scan"]}, {"id": "food-info", "name": "Nutrition info", "bounds": [3002, 4548, 3377, 5513], "labels": ["Nutrition info"]}, {"id": "saved-foods", "name": "Saved foods", "bounds": [2495, 5450, 2870, 6262], "labels": ["Saved", "BREAKFAST", "LUNCH"]}], "positions": {"welcome": [0, 0], "today": [550, 0], "steps": [1200, 0], "walk-blank": [1720, 0], "walk-filled": [2240, 0], "steps-saved": [2760, 0], "edit-walk": [3280, 0], "empty-steps": [1200, 1300], "walk-details": [1720, 1300], "walk-estimate": [2240, 1300], "walk-cadence": [2760, 1300], "manual-steps": [3280, 1300], "workout": [1200, 2700], "workout-partial": [1720, 2700], "exercise-0": [2240, 2700], "exercise-1": [2760, 2700], "exercise-2": [3280, 2700], "exercise-3": [3800, 2700], "exercise-4": [4320, 2700], "exercise-5": [4840, 2700], "full-body": [1200, 3900], "lower-body": [1720, 3900], "cardio": [2240, 3900], "exercise-6": [2760, 3900], "exercise-7": [3280, 3900], "exercise-8": [3800, 3900], "exercise-9": [4320, 3900], "exercise-10": [4840, 3900], "schedule": [1200, 5200], "edit-plan": [1720, 5200], "finish-partial": [2240, 5200], "workout-saved": [2760, 5200], "empty-workout": [3280, 5200], "progress": [3800, 5200], "nutrition": [1200, 6600], "meal-menu": [1720, 6600], "custom": [2240, 6600], "history": [2760, 6600], "scan": [3280, 6600], "food-info": [3800, 6600], "saved-foods": [4320, 6600], "barcode-manual": [4840, 6600], "targets": [1200, 8000], "empty-food": [1720, 8000], "food-portion": [2240, 8000], "edit-food": [2760, 8000], "camera-denied": [3280, 8000], "scan-not-found": [3800, 8000], "scan-loading": [4320, 8000], "network-error": [4840, 8000], "delete-record": [1200, 9400], "unsaved": [1720, 9400], "storage-error": [2240, 9400]}, "edges": [{"source": "welcome", "target": "today", "label": "Continue", "region": [0, 0, 375, 812]}, {"source": "today", "target": "steps", "label": "Daily steps", "region": [24, 160, 327, 210]}, {"source": "today", "target": "workout", "label": "Today\u2019s workout", "region": [24, 380, 327, 170]}, {"source": "today", "target": "nutrition", "label": "Daily nutrition", "region": [24, 570, 327, 230]}, {"source": "steps", "target": "walk-blank", "label": "Add walk", "region": [20, 650, 335, 48]}, {"source": "walk-blank", "target": "walk-filled", "label": "Example entered", "region": [20, 730, 335, 48]}, {"source": "walk-filled", "target": "steps-saved", "label": "Add", "region": [20, 730, 335, 48]}, {"source": "steps-saved", "target": "edit-walk", "label": "Edit session", "region": [20, 730, 335, 48]}, {"source": "walk-blank", "target": "walk-details", "label": "Distance / details", "region": [20, 730, 335, 48]}, {"source": "walk-details", "target": "walk-estimate", "label": "Estimate steps", "region": [20, 730, 335, 48]}, {"source": "walk-estimate", "target": "walk-cadence", "label": "Use cadence", "region": [20, 730, 335, 48]}, {"source": "steps", "target": "manual-steps", "label": "Manual total", "region": [20, 650, 335, 48]}, {"source": "empty-steps", "target": "walk-blank", "label": "Add first walk", "region": [20, 730, 335, 48]}, {"source": "edit-walk", "target": "steps-saved", "label": "Save changes", "region": [20, 730, 335, 48]}, {"source": "manual-steps", "target": "steps", "label": "Save total", "region": [20, 730, 335, 48]}, {"source": "walk-estimate", "target": "steps", "label": "Save estimate", "region": [20, 730, 335, 48]}, {"source": "walk-cadence", "target": "steps", "label": "Save cadence", "region": [20, 730, 335, 48]}, {"source": "workout", "target": "exercise-0", "label": "Open exercise", "region": [24, 356, 327, 101]}, {"source": "exercise-0", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "workout-partial", "target": "finish-partial", "label": "Finish workout", "region": [24, 730, 327, 48]}, {"source": "finish-partial", "target": "workout-saved", "label": "Save completed sets", "region": [24, 650, 327, 48]}, {"source": "workout-saved", "target": "today", "label": "Done", "region": [24, 730, 327, 48]}, {"source": "workout", "target": "schedule", "label": "View schedule", "region": [260, 139, 90, 60]}, {"source": "schedule", "target": "edit-plan", "label": "Edit plan", "region": [24, 700, 327, 48]}, {"source": "edit-plan", "target": "schedule", "label": "Save plan", "region": [24, 730, 327, 48]}, {"source": "today", "target": "progress", "label": "Level and achievements", "region": [24, 100, 327, 40]}, {"source": "empty-workout", "target": "schedule", "label": "Plan workout", "region": [24, 650, 327, 48]}, {"source": "exercise-1", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-2", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-3", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-4", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-5", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-6", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-7", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-8", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-9", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "exercise-10", "target": "workout-partial", "label": "Save sets", "region": [24, 730, 327, 48]}, {"source": "schedule", "target": "full-body", "label": "Choose full-body", "region": [24, 300, 327, 90]}, {"source": "schedule", "target": "lower-body", "label": "Choose lower-body", "region": [24, 410, 327, 90]}, {"source": "schedule", "target": "cardio", "label": "Choose cardio", "region": [24, 520, 327, 90]}, {"source": "full-body", "target": "exercise-4", "label": "Open exercise", "region": [24, 356, 327, 101]}, {"source": "lower-body", "target": "exercise-5", "label": "Open exercise", "region": [24, 356, 327, 101]}, {"source": "cardio", "target": "walk-details", "label": "Open exercise", "region": [24, 356, 327, 101]}, {"source": "nutrition", "target": "meal-menu", "label": "Log food", "region": [24, 1145, 327, 48]}, {"source": "meal-menu", "target": "custom", "label": "Custom creation", "region": [24, 580, 155, 90]}, {"source": "meal-menu", "target": "history", "label": "History", "region": [189, 580, 155, 90]}, {"source": "meal-menu", "target": "saved-foods", "label": "Saved", "region": [24, 680, 155, 90]}, {"source": "meal-menu", "target": "scan", "label": "Scan", "region": [189, 680, 155, 90]}, {"source": "custom", "target": "food-portion", "label": "Set serving", "region": [0, 44, 375, 70]}, {"source": "history", "target": "food-portion", "label": "Select food", "region": [0, 44, 375, 70]}, {"source": "saved-foods", "target": "food-portion", "label": "Select saved food", "region": [0, 44, 375, 70]}, {"source": "scan", "target": "food-info", "label": "Recognized barcode", "region": [0, 44, 375, 70]}, {"source": "scan", "target": "camera-denied", "label": "Camera denied", "region": [0, 44, 375, 70]}, {"source": "scan", "target": "scan-not-found", "label": "Unknown barcode", "region": [0, 44, 375, 70]}, {"source": "scan", "target": "scan-loading", "label": "Looking up food", "region": [0, 44, 375, 70]}, {"source": "scan-loading", "target": "network-error", "label": "Lookup failed", "region": [0, 44, 375, 70]}, {"source": "camera-denied", "target": "barcode-manual", "label": "Enter barcode", "region": [0, 44, 375, 70]}, {"source": "scan-not-found", "target": "custom", "label": "Create food", "region": [0, 44, 375, 70]}, {"source": "barcode-manual", "target": "food-info", "label": "Lookup", "region": [0, 44, 375, 70]}, {"source": "food-info", "target": "food-portion", "label": "Adjust serving", "region": [0, 44, 375, 70]}, {"source": "food-portion", "target": "nutrition", "label": "Add food", "region": [0, 44, 375, 70]}, {"source": "edit-food", "target": "nutrition", "label": "Save changes", "region": [0, 44, 375, 70]}, {"source": "nutrition", "target": "edit-food", "label": "Edit logged food", "region": [0, 44, 375, 70]}, {"source": "nutrition", "target": "targets", "label": "Edit targets", "region": [0, 44, 375, 70]}, {"source": "targets", "target": "nutrition", "label": "Save targets", "region": [0, 44, 375, 70]}, {"source": "empty-food", "target": "meal-menu", "label": "Log first food", "region": [0, 44, 375, 70]}, {"source": "network-error", "target": "scan", "label": "Retry", "region": [0, 44, 375, 70]}, {"source": "edit-food", "target": "delete-record", "label": "Delete", "region": [0, 44, 375, 70]}, {"source": "delete-record", "target": "nutrition", "label": "Confirm deletion", "region": [0, 44, 375, 70]}, {"source": "custom", "target": "unsaved", "label": "Leave with edits", "region": [0, 44, 375, 70]}, {"source": "unsaved", "target": "custom", "label": "Keep editing", "region": [0, 44, 375, 70]}, {"source": "storage-error", "target": "today", "label": "Return home", "region": [0, 44, 375, 70]}, {"source": "steps", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "walk-blank", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "walk-filled", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "steps-saved", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "edit-walk", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "empty-steps", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "walk-details", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "walk-estimate", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "walk-cadence", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "manual-steps", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "workout", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "workout-partial", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-0", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-1", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-2", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-3", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-4", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-5", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "full-body", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "lower-body", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "cardio", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-6", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-7", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-8", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-9", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "exercise-10", "target": "workout", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "schedule", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "edit-plan", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "finish-partial", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "workout-saved", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "empty-workout", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "progress", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "nutrition", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "meal-menu", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "custom", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "history", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "scan", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "food-info", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "saved-foods", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "barcode-manual", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "targets", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "empty-food", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "food-portion", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "edit-food", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "camera-denied", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "scan-not-found", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "scan-loading", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "network-error", "target": "nutrition", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "delete-record", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "unsaved", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}, {"source": "storage-error", "target": "today", "label": "Back", "region": [16, 44, 110, 32], "back": true}]};
+// Source-matched additions only.
+const SCREENS=[
+  {
+    "id": "full-body",
+    "name": "Workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 160,
+        "w": 220,
+        "h": 16.520000000000003,
+        "text": "TODAY\u2019S FOCUS",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 291,
+        "y": 160,
+        "w": 50,
+        "h": 17.84,
+        "text": "25 min",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 185,
+        "w": 287,
+        "h": 32.36,
+        "text": "Full body workout",
+        "role": "cardTitle",
+        "size": 23,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 225,
+        "w": 74,
+        "h": 36.32,
+        "text": "0 / 4",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 109,
+        "y": 234.5,
+        "w": 220,
+        "h": 17.84,
+        "text": "exercises complete",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 287,
+        "h": 4,
+        "fill": "#353039",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 0,
+        "h": 4,
+        "fill": "#5DFF00",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 304,
+        "w": 240,
+        "h": 19.16,
+        "text": "Your exercises",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 286,
+        "y": 304,
+        "w": 65,
+        "h": 17.84,
+        "text": "4 exercises",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 330,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 356,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 364,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 369,
+        "w": 75,
+        "h": 75,
+        "key": "05-kettlebell-goblet-squat"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 365,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 380,
+        "w": 190,
+        "h": 25.76,
+        "text": "Goblet squat",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 406,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "10 lb kettlebell. Hold close to\nyour chest.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 365,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 467,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 475,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 480,
+        "w": 75,
+        "h": 75,
+        "key": "01-dumbbell-floor-press"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 476,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 491,
+        "w": 190,
+        "h": 25.76,
+        "text": "Floor chest press",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 517,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Two 5 lb dumbbells. Press above\nyour chest.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 476,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 578,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 586,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 591,
+        "w": 75,
+        "h": 75,
+        "key": "07-resistance-band-row"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 587,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 602,
+        "w": 190,
+        "h": 25.76,
+        "text": "Seated band row",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 628,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Resistance band. Loop securely\naround your feet.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 587,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 689,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 697,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 702,
+        "w": 75,
+        "h": 75,
+        "key": "10-bodyweight-dead-bug"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 698,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 713,
+        "w": 190,
+        "h": 25.76,
+        "text": "Dead bug",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 739,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Bodyweight. Extend opposite arm\nand leg slowly.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 698,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Finish workout",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": "finish-partial"
+      }
+    ],
+    "note": "Duplicate the original Workout frame; swap only the focus text, list data and icon. Preserve its scroll area and fixed footer.",
+    "cloneRoutine": {
+      "name": "Full body workout",
+      "exerciseIndices": [
+        4,
+        0,
+        6,
+        9
+      ],
+      "minutes": 25
+    }
+  },
+  {
+    "id": "lower-body",
+    "name": "Workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 160,
+        "w": 220,
+        "h": 16.520000000000003,
+        "text": "TODAY\u2019S FOCUS",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 291,
+        "y": 160,
+        "w": 50,
+        "h": 17.84,
+        "text": "25 min",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 185,
+        "w": 287,
+        "h": 32.36,
+        "text": "Lower body workout",
+        "role": "cardTitle",
+        "size": 23,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 225,
+        "w": 74,
+        "h": 36.32,
+        "text": "0 / 4",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 109,
+        "y": 234.5,
+        "w": 220,
+        "h": 17.84,
+        "text": "exercises complete",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 287,
+        "h": 4,
+        "fill": "#353039",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 0,
+        "h": 4,
+        "fill": "#5DFF00",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 304,
+        "w": 240,
+        "h": 19.16,
+        "text": "Your exercises",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 286,
+        "y": 304,
+        "w": 65,
+        "h": 17.84,
+        "text": "4 exercises",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 330,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 356,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 364,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 369,
+        "w": 75,
+        "h": 75,
+        "key": "06-kettlebell-deadlift"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 365,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 380,
+        "w": 190,
+        "h": 25.76,
+        "text": "Kettlebell deadlift",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 406,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "10 lb kettlebell. Hinge with a\nneutral back.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 365,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 467,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 475,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 480,
+        "w": 75,
+        "h": 75,
+        "key": "05-kettlebell-goblet-squat"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 476,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 491,
+        "w": 190,
+        "h": 25.76,
+        "text": "Goblet squat",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 517,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "10 lb kettlebell. Hold close to\nyour chest.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 476,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 578,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 586,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 591,
+        "w": 75,
+        "h": 75,
+        "key": "09-lateral-band-walk"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 587,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 602,
+        "w": 190,
+        "h": 25.76,
+        "text": "Lateral band walk",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 628,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Loop resistance band. Take\ncontrolled side steps.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 587,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 689,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 697,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 702,
+        "w": 75,
+        "h": 75,
+        "key": "11-bodyweight-glute-bridge"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 698,
+        "w": 185,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 713,
+        "w": 190,
+        "h": 25.76,
+        "text": "Glute bridge",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 739,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Bodyweight. Lift hips without\narching the back.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "completion",
+        "x": 321,
+        "y": 698,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Finish workout",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": "finish-partial"
+      }
+    ],
+    "note": "Duplicate the original Workout frame; swap only the focus text, list data and icon. Preserve its scroll area and fixed footer.",
+    "cloneRoutine": {
+      "name": "Lower body workout",
+      "exerciseIndices": [
+        5,
+        4,
+        8,
+        10
+      ],
+      "minutes": 25
+    }
+  },
+  {
+    "id": "cardio",
+    "name": "Workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 160,
+        "w": 220,
+        "h": 16.520000000000003,
+        "text": "TODAY\u2019S FOCUS",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 291,
+        "y": 160,
+        "w": 50,
+        "h": 17.84,
+        "text": "20 min",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 185,
+        "w": 287,
+        "h": 32.36,
+        "text": "Cardio workout",
+        "role": "cardTitle",
+        "size": 23,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 225,
+        "w": 74,
+        "h": 36.32,
+        "text": "0 / 1",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 109,
+        "y": 234.5,
+        "w": 220,
+        "h": 17.84,
+        "text": "exercises complete",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 287,
+        "h": 4,
+        "fill": "#353039",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 0,
+        "h": 4,
+        "fill": "#5DFF00",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 304,
+        "w": 240,
+        "h": 19.16,
+        "text": "Your exercises",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 330,
+        "w": 327,
+        "h": 17.84,
+        "text": "Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 356,
+        "w": 327,
+        "h": 101,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "rect",
+        "x": 32,
+        "y": 364,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 37,
+        "y": 369,
+        "w": 75,
+        "h": 75,
+        "key": "12-treadmill-walk"
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 365,
+        "w": 190,
+        "h": 16.520000000000003,
+        "text": "20 min suggested",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 380,
+        "w": 190,
+        "h": 25.76,
+        "text": "Treadmill walk",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 127,
+        "y": 405,
+        "w": 190,
+        "h": 31.040000000000003,
+        "text": "Log your actual time, distance,\nspeed and incline.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Add Walk",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": "walk-details"
+      }
+    ],
+    "note": "Use the existing focus card and exercise-row pattern, with a single walk instead of lifting sets."
+  },
+  {
+    "id": "exercise-0",
+    "name": "Floor chest press",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Floor chest press",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "01-dumbbell-floor-press"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Floor chest press",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Two 5 lb dumbbells. Press above\nyour chest.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 0
+  },
+  {
+    "id": "exercise-1",
+    "name": "Bicep curl",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Bicep curl",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "02-dumbbell-bicep-curl"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Bicep curl",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Two 5 lb dumbbells. Keep elbows\nbeside your torso.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 1
+  },
+  {
+    "id": "exercise-2",
+    "name": "Shoulder press",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Shoulder press",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "03-dumbbell-shoulder-press"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Shoulder press",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Two 5 lb dumbbells. Press\noverhead with control.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 2
+  },
+  {
+    "id": "exercise-3",
+    "name": "Bent-over row",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Bent-over row",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "04-dumbbell-bent-over-row"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Bent-over row",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Two 5 lb dumbbells. Hinge and\nrow toward your ribs.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "5",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 3
+  },
+  {
+    "id": "exercise-4",
+    "name": "Goblet squat",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Goblet squat",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "05-kettlebell-goblet-squat"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Goblet squat",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "10 lb kettlebell. Hold close to\nyour chest.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 4
+  },
+  {
+    "id": "exercise-5",
+    "name": "Kettlebell deadlift",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Kettlebell deadlift",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "06-kettlebell-deadlift"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Kettlebell deadlift",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "10 lb kettlebell. Hinge with a\nneutral back.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 5
+  },
+  {
+    "id": "exercise-6",
+    "name": "Seated band row",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Seated band row",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "07-resistance-band-row"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Seated band row",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Resistance band. Loop securely\naround your feet.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 6
+  },
+  {
+    "id": "exercise-7",
+    "name": "Band pull-apart",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Band pull-apart",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "08-resistance-band-pull-apart"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Band pull-apart",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Resistance band. Pull apart at\nchest height.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 7
+  },
+  {
+    "id": "exercise-8",
+    "name": "Lateral band walk",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Lateral band walk",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "09-lateral-band-walk"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Lateral band walk",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Loop resistance band. Take\ncontrolled side steps.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 8
+  },
+  {
+    "id": "exercise-9",
+    "name": "Dead bug",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Dead bug",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "10-bodyweight-dead-bug"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Dead bug",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Bodyweight. Extend opposite arm\nand leg slowly.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 9
+  },
+  {
+    "id": "exercise-10",
+    "name": "Glute bridge",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Glute bridge",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 160,
+        "w": 85,
+        "h": 85,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "icon",
+        "x": 49,
+        "y": 165,
+        "w": 75,
+        "h": 75,
+        "key": "11-bodyweight-glute-bridge"
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 160,
+        "w": 180,
+        "h": 16.520000000000003,
+        "text": "3 set \u00d7 10 reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 185,
+        "w": 180,
+        "h": 25.76,
+        "text": "Glute bridge",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 147,
+        "y": 218,
+        "w": 180,
+        "h": 31.040000000000003,
+        "text": "Bodyweight. Lift hips without\narching the back.",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your sets",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 17.84,
+        "text": "Rest 45 seconds between sets. Move at your own pace.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 374,
+        "w": 38,
+        "h": 16.520000000000003,
+        "text": "Set",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 95,
+        "y": 374,
+        "w": 70,
+        "h": 16.520000000000003,
+        "text": "Reps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 374,
+        "w": 115,
+        "h": 16.520000000000003,
+        "text": "Weight (lb)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 397,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 419,
+        "w": 35,
+        "h": 25.76,
+        "text": "1",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 407,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 407,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 419,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 419,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 472,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 494,
+        "w": 35,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 482,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 482,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 494,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 494,
+        "w": 20,
+        "h": 20,
+        "checked": true
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 547,
+        "w": 327,
+        "h": 64,
+        "fill": "#222222",
+        "radius": 14
+      },
+      {
+        "type": "text",
+        "x": 39,
+        "y": 569,
+        "w": 35,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 82,
+        "y": 557,
+        "w": 76,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 111,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "10",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 180,
+        "y": 557,
+        "w": 86,
+        "h": 44,
+        "fill": "#2D2D2D",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 209,
+        "y": 569,
+        "w": 50,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "completion",
+        "x": 311,
+        "y": 569,
+        "w": 20,
+        "h": 20,
+        "checked": false
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 636,
+        "w": 160,
+        "h": 19.16,
+        "text": "+ Add set",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 675,
+        "w": 327,
+        "h": 33.68,
+        "text": "Band and bodyweight: 0 lb. Dumbbells: weight per\nhand.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Same source title, focus-card, icon tile, field and button styles. 3\u00d710 is a suggestion; only checked actual sets are recorded.",
+    "exerciseIndex": 10
+  },
+  {
+    "id": "walk-details",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 892,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 878,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 140,
+        "w": 260,
+        "h": 19.16,
+        "text": "Monday, 16 Nov",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 173,
+        "w": 327,
+        "h": 201,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 194,
+        "w": 230,
+        "h": 19.16,
+        "text": "DAILY GOAL",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 219,
+        "w": 250,
+        "h": 81.2,
+        "text": "6,240",
+        "role": "large",
+        "size": 60,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 234,
+        "w": 375,
+        "h": 624,
+        "fill": "#000000",
+        "radius": 44
+      },
+      {
+        "type": "rect",
+        "x": 165,
+        "y": 246,
+        "w": 45,
+        "h": 5,
+        "fill": "#202020",
+        "radius": 3
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 266,
+        "w": 335,
+        "h": 38.96,
+        "text": "Add walk",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 334,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Title",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 352,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 363,
+        "w": 315,
+        "h": 25.76,
+        "text": "Session 02",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 414,
+        "w": 161,
+        "h": 16.520000000000003,
+        "text": "Time",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 432,
+        "w": 161,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 443,
+        "w": 141,
+        "h": 25.76,
+        "text": "54 mins",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 414,
+        "w": 164,
+        "h": 16.520000000000003,
+        "text": "Seconds",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 191,
+        "y": 432,
+        "w": 164,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 201,
+        "y": 443,
+        "w": 144,
+        "h": 25.76,
+        "text": "20",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 494,
+        "w": 161,
+        "h": 16.520000000000003,
+        "text": "Distance (mi)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 512,
+        "w": 161,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 523,
+        "w": 141,
+        "h": 25.76,
+        "text": "2.74",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 494,
+        "w": 164,
+        "h": 16.520000000000003,
+        "text": "Calories",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 191,
+        "y": 512,
+        "w": 164,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 201,
+        "y": 523,
+        "w": 144,
+        "h": 25.76,
+        "text": "398",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 574,
+        "w": 161,
+        "h": 16.520000000000003,
+        "text": "Speed",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 592,
+        "w": 161,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 603,
+        "w": 141,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 574,
+        "w": 164,
+        "h": 16.520000000000003,
+        "text": "Incline",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 191,
+        "y": 592,
+        "w": 164,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 201,
+        "y": 603,
+        "w": 144,
+        "h": 25.76,
+        "text": "4",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "walkTypes",
+        "x": 20,
+        "y": 654,
+        "w": 335,
+        "h": 111
+      },
+      {
+        "type": "button",
+        "x": 20,
+        "y": 794,
+        "w": 335,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Next",
+        "textFill": "#FFFFFF",
+        "radius": 24,
+        "accent": "purple",
+        "destination": "walk-estimate"
+      }
+    ],
+    "note": "Original Add walk sheet extended by one 80 px input row. Keep its three walk-type tiles, 20 px inset, 45/46 px inputs, and purple pill action."
+  },
+  {
+    "id": "walk-estimate",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 234,
+        "w": 375,
+        "h": 544,
+        "fill": "#000000",
+        "radius": 44
+      },
+      {
+        "type": "rect",
+        "x": 165,
+        "y": 246,
+        "w": 45,
+        "h": 5,
+        "fill": "#202020",
+        "radius": 3
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 266,
+        "w": 335,
+        "h": 38.96,
+        "text": "Add walk",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 334,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Estimation method",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 352,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 363,
+        "w": 315,
+        "h": 25.76,
+        "text": "Distance & step length",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 414,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Step length (inches)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 432,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 443,
+        "w": 315,
+        "h": 25.76,
+        "text": "28",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 512,
+        "w": 335,
+        "h": 101,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 528,
+        "w": 285,
+        "h": 19.16,
+        "text": "Estimated steps",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 553,
+        "w": 285,
+        "h": 36.32,
+        "text": "\u2248 6,200",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 589,
+        "w": 295,
+        "h": 17.84,
+        "text": "Incline and calories do not determine steps.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 624,
+        "w": 335,
+        "h": 33.68,
+        "text": "28 inches is a starting estimate, not your measured\nstep length.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 660,
+        "w": 335,
+        "h": 19.16,
+        "text": "\u2610 Add estimate to daily total",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 687,
+        "w": 335,
+        "h": 17.84,
+        "text": "Leave off if your tracker counted this walk.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "button",
+        "x": 20,
+        "y": 714,
+        "w": 335,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Add",
+        "textFill": "#FFFFFF",
+        "radius": 24,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": "New state within the original Add walk sheet. Preserve the original page behind it and its 234 px sheet origin."
+  },
+  {
+    "id": "walk-cadence",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 234,
+        "w": 375,
+        "h": 544,
+        "fill": "#000000",
+        "radius": 44
+      },
+      {
+        "type": "rect",
+        "x": 165,
+        "y": 246,
+        "w": 45,
+        "h": 5,
+        "fill": "#202020",
+        "radius": 3
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 266,
+        "w": 335,
+        "h": 38.96,
+        "text": "Add walk",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 334,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Estimation method",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 352,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 363,
+        "w": 315,
+        "h": 25.76,
+        "text": "Measured steps per minute",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 414,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Steps per minute",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 432,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 443,
+        "w": 315,
+        "h": 25.76,
+        "text": "110",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 512,
+        "w": 335,
+        "h": 101,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 528,
+        "w": 285,
+        "h": 19.16,
+        "text": "Estimated steps",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 553,
+        "w": 285,
+        "h": 36.32,
+        "text": "\u2248 5,977",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 40,
+        "y": 589,
+        "w": 295,
+        "h": 17.84,
+        "text": "Incline and calories do not determine steps.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 624,
+        "w": 335,
+        "h": 33.68,
+        "text": "Count every footfall for one minute at this speed and\nincline.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 660,
+        "w": 335,
+        "h": 19.16,
+        "text": "\u2610 Add estimate to daily total",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 687,
+        "w": 335,
+        "h": 17.84,
+        "text": "Leave off if your tracker counted this walk.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "button",
+        "x": 20,
+        "y": 714,
+        "w": 335,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Add",
+        "textFill": "#FFFFFF",
+        "radius": 24,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": "New state within the original Add walk sheet. Preserve the original page behind it and its 234 px sheet origin."
+  },
+  {
+    "id": "manual-steps",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 272,
+        "w": 375,
+        "h": 506,
+        "fill": "#000000",
+        "radius": 44
+      },
+      {
+        "type": "rect",
+        "x": 165,
+        "y": 284,
+        "w": 45,
+        "h": 5,
+        "fill": "#202020",
+        "radius": 3
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 311,
+        "w": 335,
+        "h": 38.96,
+        "text": "Edit daily total",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 396,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Daily steps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 414,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 425,
+        "w": 315,
+        "h": 25.76,
+        "text": "8,000",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 492,
+        "w": 335,
+        "h": 33.68,
+        "text": "Replaces the whole day\u2019s total, including estimates\nalready added. Walk records stay saved.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "button",
+        "x": 20,
+        "y": 714,
+        "w": 335,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Save",
+        "textFill": "#FFFFFF",
+        "radius": 24,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": ""
+  },
+  {
+    "id": "edit-walk",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 234,
+        "w": 375,
+        "h": 544,
+        "fill": "#000000",
+        "radius": 44
+      },
+      {
+        "type": "rect",
+        "x": 165,
+        "y": 246,
+        "w": 45,
+        "h": 5,
+        "fill": "#202020",
+        "radius": 3
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 266,
+        "w": 335,
+        "h": 38.96,
+        "text": "Edit walk",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 334,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Title",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 352,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 363,
+        "w": 315,
+        "h": 25.76,
+        "text": "Session 01",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 414,
+        "w": 161,
+        "h": 16.520000000000003,
+        "text": "Time",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 432,
+        "w": 161,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 443,
+        "w": 141,
+        "h": 25.76,
+        "text": "15 mins",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 414,
+        "w": 164,
+        "h": 16.520000000000003,
+        "text": "Calories",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 191,
+        "y": 432,
+        "w": 164,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 201,
+        "y": 443,
+        "w": 144,
+        "h": 25.76,
+        "text": "100",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 494,
+        "w": 161,
+        "h": 16.520000000000003,
+        "text": "Speed",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 20,
+        "y": 512,
+        "w": 161,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 30,
+        "y": 523,
+        "w": 141,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 191,
+        "y": 494,
+        "w": 164,
+        "h": 16.520000000000003,
+        "text": "Incline",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 191,
+        "y": 512,
+        "w": 164,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 201,
+        "y": 523,
+        "w": 144,
+        "h": 25.76,
+        "text": "3",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 601,
+        "w": 335,
+        "h": 19.16,
+        "text": "Delete walk",
+        "role": "section",
+        "size": 13,
+        "fill": "#6600FF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 20,
+        "y": 647,
+        "w": 335,
+        "h": 17.84,
+        "text": "Changes update this walk, not a second copy.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "button",
+        "x": 20,
+        "y": 714,
+        "w": 335,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Save",
+        "textFill": "#FFFFFF",
+        "radius": 24,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": ""
+  },
+  {
+    "id": "food-portion",
+    "name": "Nutrition info",
+    "source": "custom",
+    "width": 375,
+    "height": 965,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Nutrition info",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 951,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 128,
+        "w": 327,
+        "h": 17.84,
+        "text": "These are calories and macronutrients per serving.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 166,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Name",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 184,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 195,
+        "w": 315,
+        "h": 25.76,
+        "text": "Greek yogurt",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 250,
+        "w": 158,
+        "h": 16.520000000000003,
+        "text": "Serving size",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 268,
+        "w": 158,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 279,
+        "w": 138,
+        "h": 25.76,
+        "text": "170 g",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 193,
+        "y": 250,
+        "w": 158,
+        "h": 16.520000000000003,
+        "text": "Servings",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 268,
+        "w": 158,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 203,
+        "y": 279,
+        "w": 138,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your portion: 200 kcal \u00b7 34 g protein",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 385,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 73,
+        "y": 404,
+        "w": 60,
+        "h": 60,
+        "key": "04-calories"
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 476,
+        "w": 118,
+        "h": 19.16,
+        "text": "CALORIES",
+        "role": "section",
+        "size": 13,
+        "fill": "#4C8EFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 38,
+        "y": 510,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 50,
+        "y": 522,
+        "w": 108,
+        "h": 25.76,
+        "text": "100",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 385,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 242,
+        "y": 404,
+        "w": 60,
+        "h": 60,
+        "key": "01-protein"
+      },
+      {
+        "type": "text",
+        "x": 213,
+        "y": 476,
+        "w": 118,
+        "h": 19.16,
+        "text": "PROTEIN",
+        "role": "section",
+        "size": 13,
+        "fill": "#FF9900",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 207,
+        "y": 510,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 219,
+        "y": 522,
+        "w": 108,
+        "h": 25.76,
+        "text": "17",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 598,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 73,
+        "y": 617,
+        "w": 60,
+        "h": 60,
+        "key": "02-carbs"
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 689,
+        "w": 118,
+        "h": 19.16,
+        "text": "CARBS",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 38,
+        "y": 723,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 50,
+        "y": 735,
+        "w": 108,
+        "h": 25.76,
+        "text": "6",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 598,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 242,
+        "y": 617,
+        "w": 60,
+        "h": 60,
+        "key": "03-fat"
+      },
+      {
+        "type": "text",
+        "x": 213,
+        "y": 689,
+        "w": 118,
+        "h": 19.16,
+        "text": "FAT",
+        "role": "section",
+        "size": 13,
+        "fill": "#F5E900",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 207,
+        "y": 723,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 219,
+        "y": 735,
+        "w": 108,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 831,
+        "w": 327,
+        "h": 17.84,
+        "text": "Values per serving. Blank nutrients stay unknown.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 867,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 883,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Add",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Reuse the original Custom Nutrition page, its field style and 2\u00d72 macro cards. New portion fields are additions; keep the original Nutrition dashboard intact."
+  },
+  {
+    "id": "edit-food",
+    "name": "Edit Nutrition",
+    "source": "custom",
+    "width": 375,
+    "height": 965,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Edit Nutrition",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 951,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 128,
+        "w": 327,
+        "h": 17.84,
+        "text": "These are calories and macronutrients per serving.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 166,
+        "w": 335,
+        "h": 16.520000000000003,
+        "text": "Name",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 184,
+        "w": 335,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 195,
+        "w": 315,
+        "h": 25.76,
+        "text": "Greek yogurt",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 250,
+        "w": 158,
+        "h": 16.520000000000003,
+        "text": "Serving size",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 268,
+        "w": 158,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 279,
+        "w": 138,
+        "h": 25.76,
+        "text": "170 g",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 193,
+        "y": 250,
+        "w": 158,
+        "h": 16.520000000000003,
+        "text": "Servings",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 268,
+        "w": 158,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 203,
+        "y": 279,
+        "w": 138,
+        "h": 25.76,
+        "text": "2",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 341,
+        "w": 327,
+        "h": 19.16,
+        "text": "Your portion: 200 kcal \u00b7 34 g protein",
+        "role": "section",
+        "size": 13,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 385,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 73,
+        "y": 404,
+        "w": 60,
+        "h": 60,
+        "key": "04-calories"
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 476,
+        "w": 118,
+        "h": 19.16,
+        "text": "CALORIES",
+        "role": "section",
+        "size": 13,
+        "fill": "#4C8EFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 38,
+        "y": 510,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 50,
+        "y": 522,
+        "w": 108,
+        "h": 25.76,
+        "text": "100",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 385,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 242,
+        "y": 404,
+        "w": 60,
+        "h": 60,
+        "key": "01-protein"
+      },
+      {
+        "type": "text",
+        "x": 213,
+        "y": 476,
+        "w": 118,
+        "h": 19.16,
+        "text": "PROTEIN",
+        "role": "section",
+        "size": 13,
+        "fill": "#FF9900",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 207,
+        "y": 510,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 219,
+        "y": 522,
+        "w": 108,
+        "h": 25.76,
+        "text": "17",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 598,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 73,
+        "y": 617,
+        "w": 60,
+        "h": 60,
+        "key": "02-carbs"
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 689,
+        "w": 118,
+        "h": 19.16,
+        "text": "CARBS",
+        "role": "section",
+        "size": 13,
+        "fill": "#5DFF00",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 38,
+        "y": 723,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 50,
+        "y": 735,
+        "w": 108,
+        "h": 25.76,
+        "text": "6",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 193,
+        "y": 598,
+        "w": 158,
+        "h": 196,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "icon",
+        "x": 242,
+        "y": 617,
+        "w": 60,
+        "h": 60,
+        "key": "03-fat"
+      },
+      {
+        "type": "text",
+        "x": 213,
+        "y": 689,
+        "w": 118,
+        "h": 19.16,
+        "text": "FAT",
+        "role": "section",
+        "size": 13,
+        "fill": "#F5E900",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 207,
+        "y": 723,
+        "w": 130,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 219,
+        "y": 735,
+        "w": 108,
+        "h": 25.76,
+        "text": "0",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 831,
+        "w": 327,
+        "h": 17.84,
+        "text": "Values per serving. Blank nutrients stay unknown.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 867,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 883,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Save",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Reuse the original Custom Nutrition page, its field style and 2\u00d72 macro cards. New portion fields are additions; keep the original Nutrition dashboard intact."
+  },
+  {
+    "id": "targets",
+    "name": "Daily goals",
+    "source": "custom",
+    "width": 375,
+    "height": 965,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily goals",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 951,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Daily steps",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 184,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 195,
+        "w": 307,
+        "h": 25.76,
+        "text": "8,000",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 270,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Calories (kcal)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 288,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 299,
+        "w": 307,
+        "h": 25.76,
+        "text": "2,000",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 374,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Protein (g)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 392,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 403,
+        "w": 307,
+        "h": 25.76,
+        "text": "100",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 478,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Carbs (g)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 496,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 507,
+        "w": 307,
+        "h": 25.76,
+        "text": "225",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 582,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Fat (g)",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 600,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 611,
+        "w": 307,
+        "h": 25.76,
+        "text": "70",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 710,
+        "w": 327,
+        "h": 33.68,
+        "text": "Changes update your goals, not your saved activity.\nThe 8,000-step XP milestone remains fixed.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 867,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 883,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Save",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Editable targets use the existing form fields; these are starting values, not a personalized prescription."
+  },
+  {
+    "id": "schedule",
+    "name": "Workout",
+    "source": "workout",
+    "width": 375,
+    "height": 965,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 951,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 160,
+        "w": 287,
+        "h": 16.520000000000003,
+        "text": "THIS WEEK",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 185,
+        "w": 287,
+        "h": 32.36,
+        "text": "Your workouts",
+        "role": "cardTitle",
+        "size": 23,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 234,
+        "w": 287,
+        "h": 17.84,
+        "text": "16\u201322 Nov",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 315,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "MONDAY",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 339,
+        "w": 327,
+        "h": 90,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 356,
+        "w": 287,
+        "h": 25.76,
+        "text": "Upper body workout",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 388,
+        "w": 287,
+        "h": 17.84,
+        "text": "20 min \u00b7 5 exercises",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 441,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "TUESDAY",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 465,
+        "w": 327,
+        "h": 90,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 482,
+        "w": 287,
+        "h": 25.76,
+        "text": "Cardio workout",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 514,
+        "w": 287,
+        "h": 17.84,
+        "text": "20 min \u00b7 walking",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 567,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "WEDNESDAY",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 591,
+        "w": 327,
+        "h": 90,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 608,
+        "w": 287,
+        "h": 25.76,
+        "text": "Full body workout",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 640,
+        "w": 287,
+        "h": 17.84,
+        "text": "25 min \u00b7 4 exercises",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 693,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "FRIDAY",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 717,
+        "w": 327,
+        "h": 90,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 734,
+        "w": 287,
+        "h": 25.76,
+        "text": "Lower body workout",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 766,
+        "w": 287,
+        "h": 17.84,
+        "text": "25 min \u00b7 4 exercises",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 867,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 883,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Edit plan",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Use the existing summary-card and list-row pattern; no new bottom navigation or dashboard rearrangement."
+  },
+  {
+    "id": "edit-plan",
+    "name": "Edit workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Edit workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Workout",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 184,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 195,
+        "w": 307,
+        "h": 25.76,
+        "text": "Upper body workout",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 270,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Date",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 288,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 299,
+        "w": 307,
+        "h": 25.76,
+        "text": "Monday, 16 Nov",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 374,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Note",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 392,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 403,
+        "w": 307,
+        "h": 25.76,
+        "text": "Move at your own pace.",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 485,
+        "w": 327,
+        "h": 33.68,
+        "text": "Swap, move or choose a recovery day. Completed\nsessions remain on their original date.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Save",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": ""
+  },
+  {
+    "id": "finish-partial",
+    "name": "Finish workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Workout",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Finish workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "2 / 5 exercises complete",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 17.84,
+        "text": "Only your checked sets will be saved.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Save workout",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "workout-saved",
+    "name": "Workout complete",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout complete",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Workout saved",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 17.84,
+        "text": "Actual sets and weights saved. +120 XP",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Done",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "empty-workout",
+    "name": "Workout",
+    "source": "workout",
+    "width": 375,
+    "height": 812,
+    "accent": "green",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Workout",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "No workouts yet",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Your completed exercises and walks will appear\nhere.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#5DFF00",
+        "text": "Choose workout",
+        "textFill": "#000000",
+        "radius": 14,
+        "accent": "green",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "empty-food",
+    "name": "Nutrition",
+    "source": "nutrition",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Nutrition",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "No food logged",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 17.84,
+        "text": "Add food to start today\u2019s nutrition log.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Log food",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "empty-steps",
+    "name": "Daily steps",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Daily steps",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "No walks yet",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 17.84,
+        "text": "Add a walk or enter your daily step total.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Add Walk",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "camera-denied",
+    "name": "Scan",
+    "source": "scan",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Scan",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Camera unavailable",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Allow camera access or enter a barcode\nmanually.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Enter barcode",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "scan-not-found",
+    "name": "Scan",
+    "source": "scan",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Scan",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Product not found",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Enter the nutrition label manually. Nothing\nhas been logged.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Custom Creation",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "scan-loading",
+    "name": "Scan",
+    "source": "scan",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Scan",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Looking up barcode",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Checking the food label. Nothing has been\nlogged.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Cancel",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "network-error",
+    "name": "Scan",
+    "source": "scan",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Scan",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Unable to connect",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Try again, or enter the nutrition label\nmanually.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Try again",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "storage-error",
+    "name": "Today",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Today",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Unable to save",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "Changes are in memory only. Allow browser\nstorage and retry before closing.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Try again",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "delete-record",
+    "name": "History",
+    "source": "history",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "History",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Delete this entry?",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 33.68,
+        "text": "The entry is removed from totals. Your saved\nfood remains available.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Delete",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "unsaved",
+    "name": "Nutrition info",
+    "source": "custom",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Nutrition info",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 166,
+        "w": 327,
+        "h": 210,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 193,
+        "w": 287,
+        "h": 25.76,
+        "text": "Discard changes?",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 242,
+        "w": 287,
+        "h": 17.84,
+        "text": "Your changes have not been saved.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Keep editing",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": "Use the same source card, heading, body and action button styles. No replacement of the existing page."
+  },
+  {
+    "id": "barcode-manual",
+    "name": "Scan",
+    "source": "scan",
+    "width": 375,
+    "height": 812,
+    "accent": "pink",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Nutrition",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Scan",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 128,
+        "w": 327,
+        "h": 17.84,
+        "text": "Enter the barcode on the label of a food item.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 187,
+        "w": 327,
+        "h": 16.520000000000003,
+        "text": "Barcode",
+        "role": "label",
+        "size": 11,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 205,
+        "w": 327,
+        "h": 46,
+        "fill": "#222222",
+        "radius": 10
+      },
+      {
+        "type": "text",
+        "x": 34,
+        "y": 216,
+        "w": 307,
+        "h": 25.76,
+        "text": "3017620422003",
+        "role": "value",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 292,
+        "w": 327,
+        "h": 17.84,
+        "text": "Review nutrition and serving size before adding.",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#E24EFF",
+        "text": "Look up",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "pink",
+        "destination": null
+      }
+    ],
+    "note": ""
+  },
+  {
+    "id": "progress",
+    "name": "Progress",
+    "source": "steps",
+    "width": 375,
+    "height": 812,
+    "accent": "purple",
+    "elements": [
+      {
+        "type": "text",
+        "x": 31.2,
+        "y": 13,
+        "w": 70,
+        "h": 20,
+        "text": "2:04",
+        "role": "value",
+        "size": 15,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 288,
+        "y": 16,
+        "w": 70,
+        "h": 17.84,
+        "text": "\u2582 \u2584 \u2586 \u25b0",
+        "role": "body",
+        "size": 12,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 53,
+        "w": 327,
+        "h": 20.48,
+        "text": "\u2039 Today",
+        "role": "back",
+        "size": 14,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 24,
+        "y": 82,
+        "w": 327,
+        "h": 38.96,
+        "text": "Progress",
+        "role": "title",
+        "size": 28,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 134,
+        "y": 798,
+        "w": 107,
+        "h": 4,
+        "fill": "#FFFFFF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 139,
+        "w": 327,
+        "h": 154,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 160,
+        "w": 287,
+        "h": 16.520000000000003,
+        "text": "YOUR PROGRESS",
+        "role": "label",
+        "size": 11,
+        "fill": "#FFFFFF",
+        "weight": 400
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 185,
+        "w": 287,
+        "h": 32.36,
+        "text": "Level 2",
+        "role": "cardTitle",
+        "size": 23,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 225,
+        "w": 287,
+        "h": 36.32,
+        "text": "120 / 500 XP",
+        "role": "number",
+        "size": 26,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 287,
+        "h": 4,
+        "fill": "#353039",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 44,
+        "y": 268,
+        "w": 68.88,
+        "h": 4,
+        "fill": "#6600FF",
+        "radius": 2
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 322,
+        "w": 327,
+        "h": 91,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 342,
+        "w": 287,
+        "h": 25.76,
+        "text": "First chapter",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 375,
+        "w": 287,
+        "h": 17.84,
+        "text": "First workout completed",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 433,
+        "w": 327,
+        "h": 91,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 453,
+        "w": 287,
+        "h": 25.76,
+        "text": "Finding your rhythm",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 486,
+        "w": 287,
+        "h": 17.84,
+        "text": "4 / 5 workouts completed",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 24,
+        "y": 544,
+        "w": 327,
+        "h": 91,
+        "fill": "#151515",
+        "radius": 20
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 564,
+        "w": 287,
+        "h": 25.76,
+        "text": "Level unlocked",
+        "role": "rowTitle",
+        "size": 18,
+        "fill": "#FFFFFF",
+        "weight": 600
+      },
+      {
+        "type": "text",
+        "x": 44,
+        "y": 597,
+        "w": 287,
+        "h": 17.84,
+        "text": "Level 2 reached",
+        "role": "body",
+        "size": 12,
+        "fill": "#A79DAF",
+        "weight": 400
+      },
+      {
+        "type": "rect",
+        "x": 0,
+        "y": 714,
+        "w": 375,
+        "h": 64,
+        "fill": "#050505",
+        "radius": 0
+      },
+      {
+        "type": "button",
+        "x": 24,
+        "y": 730,
+        "w": 327,
+        "h": 48,
+        "fill": "#6600FF",
+        "text": "Done",
+        "textFill": "#FFFFFF",
+        "radius": 14,
+        "accent": "purple",
+        "destination": null
+      }
+    ],
+    "note": "Standalone missing XP/milestone detail. It does not add a new card to your existing Today page; choose an entry point in your file."
+  }
+];
+const ICONS={"08-resistance-band-pull-apart": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Band pull-apart</title><desc id=\"desc\">Band pull-apart with an arm span similar to standing body height.</desc><g id=\"pictogram\"><path d=\"M119 144.854 L113.363 184.959 L114.746 224.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M137 144.854 L142.637 184.959 L141.254 224.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M128 99.554 L128 142.854\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M114 93.554 L83.4 93.554 L55.5 93.554\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M142 93.554 L172.6 93.554 L200.5 93.554\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"128\" cy=\"70.554\" r=\"13\" fill=\"#000000\"/><path d=\"M55.5 93.554 V105.554 Q128 111.554 200.5 105.554 V93.554\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>", "06-kettlebell-deadlift": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Kettlebell deadlift</title><desc id=\"desc\">Deep hip hinge holding a kettlebell low between the feet.</desc><g id=\"pictogram\"><path d=\"M108.296 159.812 L128.546 194.886 L111.811 230.776\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M111.113 165.11 L139.751 193.748 L153.295 230.96\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M149.702 141.194 L111.471 161.522\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M153.122 134.846 L148.335 165.069 L143.971 192.625\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M156.878 141.909 L152.091 172.132 L147.726 199.689\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"175.308\" cy=\"127.579\" r=\"13\" fill=\"#000000\"/><g transform=\"translate(145.849 215.157)\"><path d=\"M-7-7V-15Q0-24 7-15V-7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-7-8Q-15 1-9 9Q0 15 9 9Q15 1 7-8Z\" fill=\"#5DFF00\"/></g></g></svg>", "01-dumbbell-floor-press": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Floor chest press</title><desc id=\"desc\">Supine chest press with adult-proportioned arms and legs and bent knees.</desc><g id=\"pictogram\"><path d=\"M131.3 173.806 L159.938 145.168 L176.674 181.058\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M131.3 167.806 L157.333 136.781 L174.069 172.671\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M86 170.806 L129.3 170.806\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 174.806 L74.686 144.671 L74.686 116.771\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 166.806 L85.314 136.671 L85.314 108.771\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"57\" cy=\"170.806\" r=\"13\" fill=\"#000000\"/><g transform=\"translate(74.686 116.771) rotate(0)\"><circle cx=\"0\" cy=\"0\" r=\"6.5\" fill=\"#5DFF00\"/><path d=\"M-8 0 L8 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g transform=\"translate(85.314 108.771) rotate(0)\"><circle cx=\"0\" cy=\"0\" r=\"6.5\" fill=\"#5DFF00\"/><path d=\"M-8 0 L8 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>", "10-bodyweight-dead-bug": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Dead bug</title><desc id=\"desc\">Supine dead bug with opposite arm and leg extended; no elongated forearms.</desc><g id=\"pictogram\"><path d=\"M131.3 173.776 L171.646 177.305 L211.095 180.757\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M131.3 167.776 L138.333 127.891 L176.583 138.14\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M86 170.776 L129.3 170.776\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 174.776 L80 144.176 L80 116.276\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 166.776 L54.934 149.224 L32.08 133.221\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"57\" cy=\"170.776\" r=\"13\" fill=\"#000000\"/></g></svg>", "09-lateral-band-walk": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Lateral band walk</title><desc id=\"desc\">Lateral band step with consistent thigh and shin lengths.</desc><g id=\"pictogram\"><path d=\"M120.412 156.46 L87.236 179.69 L76.987 217.94\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M138.313 154.578 L175.018 171.694 L191.754 207.584\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M124.627 110.467 L129.153 153.53\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M110.077 105.963 L95.632 132.94 L118.6 117.1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M137.923 103.037 L158.707 125.495 L132.1 117.1\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"121.596\" cy=\"81.626\" r=\"13\" fill=\"#000000\"/><path d=\"M96.82 172.979 Q128 160.75 164.415 166.75 M93.82 179.979 Q128 167.75 167.415 173.75\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M199 242H221M215 237 221 242 215 247\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>", "07-resistance-band-row": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Band row</title><desc id=\"desc\">Seated band row with naturally extended legs and flexed elbows.</desc><g id=\"pictogram\"><path d=\"M102.1 150.981 L158.706 172.418 L161.706 181.418 L103 156.381\" fill=\"none\" stroke=\"#000000\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 170.781 L113.106 176.418 L152.706 176.418\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 170.781 L118.885 177.814 L158.485 177.814\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M76 125.481 L76 168.781\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72 119.481 L74.217 150.001 L102.1 150.981\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 119.481 L75.886 149.804 L103 156.381\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"76\" cy=\"96.481\" r=\"13\" fill=\"#000000\"/></g></svg>", "04-dumbbell-bent-over-row": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Bent-over row</title><desc id=\"desc\">Hip-hinged dumbbell row with a neutral torso and bent knees.</desc><g id=\"pictogram\"><path d=\"M112.604 147.547 L126.456 185.605 L112.912 222.816\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116.847 151.79 L142.88 182.814 L146.331 222.264\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M146.757 117.636 L116.14 148.254\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M148.172 110.565 L124.731 130.235 L150.948 120.692\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M153.828 116.222 L132.191 137.86 L159.667 133.015\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"167.263\" cy=\"97.13\" r=\"13\" fill=\"#000000\"/><g transform=\"translate(150.948 120.692) rotate(-20)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g transform=\"translate(159.667 133.015) rotate(-10)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>", "11-bodyweight-glute-bridge": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Glute bridge</title><desc id=\"desc\">Glute bridge with shoulders and feet down and natural hip and knee placement.</desc><g id=\"pictogram\"><path d=\"M123.085 179.875 L162.027 168.751 L181.2 203.4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M120.645 174.394 L161.009 171.086 L183.9 203.4\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80.481 195.56 L120.038 177.948\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M76.627 201.654 L106.762 206.968 L134.662 206.968\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73.373 194.346 L103.675 198.605 L131.575 198.605\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"52\" cy=\"198\" r=\"13\" fill=\"#000000\"/></g></svg>", "12-treadmill-walk": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Treadmill walk</title><desc id=\"desc\">Walking stride on a treadmill with the same adult limb proportions as the other icons.</desc><g id=\"pictogram\"><path d=\"M31 218H227\" fill=\"none\" stroke=\"#000000\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M212 216 198 103H175\" fill=\"none\" stroke=\"#000000\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M193 83H224V103H193Z\" fill=\"none\" stroke=\"#000000\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.274 136.826 L99.024 171.9 L82.289 207.789\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M125.23 136.094 L145.48 171.168 L170.934 201.504\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116.731 91.498 L122.008 134.475\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M112.03 86.03 L131.699 109.471 L155.861 95.521\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.97 85.055 L102.419 110.121 L81.046 128.055\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"113.197\" cy=\"62.714\" r=\"13\" fill=\"#000000\"/></g></svg>", "03-dumbbell-shoulder-press": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Shoulder press</title><desc id=\"desc\">Overhead dumbbell press with natural upper-arm and forearm lengths.</desc><g id=\"pictogram\"><path d=\"M119 148.854 L113.363 188.959 L114.746 228.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M137 148.854 L142.637 188.959 L141.254 228.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M128 103.554 L128 146.854\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M114 97.554 L103.534 68.799 L103.534 40.899\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M142 97.554 L152.466 68.799 L152.466 40.899\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"128\" cy=\"74.554\" r=\"13\" fill=\"#000000\"/><g transform=\"translate(103.534 40.899) rotate(0)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g transform=\"translate(152.466 40.899) rotate(0)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>", "05-kettlebell-goblet-squat": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Goblet squat</title><desc id=\"desc\">Squat with a kettlebell held at the chest; limbs retain their adult proportions.</desc><g id=\"pictogram\"><defs><mask id=\"goblet-equipment-space\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"256\" height=\"256\"><rect width=\"256\" height=\"256\" fill=\"white\"/><g color=\"black\"><g transform=\"translate(128 133.283)\"><path d=\"M-7-7V-15Q0-24 7-15V-7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-7-8Q-15 1-9 9Q0 15 9 9Q15 1 7-8Z\" fill=\"#5DFF00\" stroke=\"#5DFF00\" stroke-width=\"5\"/></g></g></mask></defs><g mask=\"url(#goblet-equipment-space)\"><path d=\"M119 159.583 L83.926 179.833 L77.05 218.832\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M137 159.583 L172.074 179.833 L178.95 218.832\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M128 114.283 L128 157.583\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M114 108.283 L106.426 137.931 L121.7 114.583\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M142 108.283 L149.574 137.931 L134.3 114.583\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"128\" cy=\"85.283\" r=\"13\" fill=\"#000000\"/></g><g transform=\"translate(128 133.283)\"><path d=\"M-7-7V-15Q0-24 7-15V-7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-7-8Q-15 1-9 9Q0 15 9 9Q15 1 7-8Z\" fill=\"#5DFF00\"/></g></g></svg>", "02-dumbbell-bicep-curl": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Bicep curl</title><desc id=\"desc\">Standing curls with elbows beside the torso and proportionate forearms.</desc><g id=\"pictogram\"><path d=\"M119 144.854 L113.363 184.959 L114.746 224.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M137 144.854 L142.637 184.959 L141.254 224.535\" fill=\"none\" stroke=\"#000000\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M128 99.554 L128 142.854\" fill=\"none\" stroke=\"#000000\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M114 93.554 L108.686 123.689 L101.465 96.739\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M142 93.554 L147.314 123.689 L154.535 96.739\" fill=\"none\" stroke=\"#000000\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"128\" cy=\"70.554\" r=\"13\" fill=\"#000000\"/><g transform=\"translate(101.465 96.739) rotate(0)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g transform=\"translate(154.535 96.739) rotate(0)\"><path d=\"M-10 0 L10 0\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-11-7V7 M11-7V7\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M-16-4V4 M16-4V4\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>", "02-carbs": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 64 64\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Carbs</title><desc id=\"desc\">Wheat stalk pictogram representing carbohydrates.</desc><path d=\"M32 21v36\" fill=\"none\" stroke=\"#5DFF00\" stroke-width=\"3.5\" stroke-linecap=\"round\"/><path fill=\"#5DFF00\" d=\"M30 49C19 49 12 43 12 35c11 0 18 6 18 14Zm4 0c11 0 18-6 18-14-11 0-18 6-18 14Z\"/><path fill=\"#5DFF00\" d=\"M30 37C19 37 12 31 12 23c11 0 18 6 18 14Zm4 0c11 0 18-6 18-14-11 0-18 6-18 14Z\"/><path fill=\"#5DFF00\" d=\"M30 25C19 25 12 19 12 11c11 0 18 6 18 14Zm4 0c11 0 18-6 18-14-11 0-18 6-18 14Z\"/><path fill=\"#5DFF00\" d=\"M32 4c-9 8-10 15 0 22 10-7 9-14 0-22Z\"/></svg>", "01-protein": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 64 64\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Protein</title><desc id=\"desc\">Drumstick pictogram representing dietary protein.</desc><path fill=\"#FF9900\" d=\"M31 29 17 43C13 40 8 42 8 47c0 4 3 7 7 6-1 4 2 7 6 6 5-1 7-6 4-10l14-14Z\"/><path fill=\"#FF9900\" d=\"M51 8C41 3 31 11 29 22c-1 5-3 7-6 11l9 10c4-4 8-6 13-8C57 31 62 16 51 8Z\"/></svg>", "04-calories": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 64 64\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Calories</title><desc id=\"desc\">Flame pictogram representing food energy.</desc><path fill=\"#4C8EFF\" fill-rule=\"evenodd\" d=\"M35 4c5 12-5 18 0 25 5-3 8-8 9-14 9 9 15 20 10 31-4 9-12 14-23 14C17 60 7 51 9 38c1-8 6-14 12-19-1 8 0 13 5 16C20 23 29 15 35 4Zm-3 32c-2 5-9 9-9 14 0 4 3 7 8 7s9-3 8-8c-1-4-4-8-7-13Z\"/></svg>", "03-fat": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 64 64\" color=\"#000000\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Fat</title><desc id=\"desc\">Oil droplet pictogram representing dietary fat.</desc><path fill=\"#F5E900\" d=\"M32 5C28 14 13 28 13 40c0 11 8 19 19 19s19-8 19-19C51 28 36 14 32 5Z\"/></svg>", "walk-treadmill": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#FFFFFF\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Treadmill walk</title><desc id=\"desc\">Walking stride on a treadmill with the same adult limb proportions as the other icons.</desc><g id=\"pictogram\"><path d=\"M31 218H227\" fill=\"none\" stroke=\"#6600FF\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M212 216 198 103H175\" fill=\"none\" stroke=\"#6600FF\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M193 83H224V103H193Z\" fill=\"none\" stroke=\"#6600FF\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.274 136.826 L99.024 171.9 L82.289 207.789\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M125.23 136.094 L145.48 171.168 L170.934 201.504\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116.731 91.498 L122.008 134.475\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M112.03 86.03 L131.699 109.471 L155.861 95.521\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.97 85.055 L102.419 110.121 L81.046 128.055\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"113.197\" cy=\"62.714\" r=\"13\" fill=\"#FFFFFF\"/></g></svg>", "walk-pad": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#FFFFFF\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Treadmill walk</title><desc id=\"desc\">Walking stride on a treadmill with the same adult limb proportions as the other icons.</desc><g id=\"pictogram\"><path d=\"M31 218H227\" fill=\"none\" stroke=\"#6600FF\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.274 136.826 L99.024 171.9 L82.289 207.789\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M125.23 136.094 L145.48 171.168 L170.934 201.504\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116.731 91.498 L122.008 134.475\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M112.03 86.03 L131.699 109.471 L155.861 95.521\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.97 85.055 L102.419 110.121 L81.046 128.055\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"113.197\" cy=\"62.714\" r=\"13\" fill=\"#FFFFFF\"/></g></svg>", "walk-outdoor": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"256\" height=\"256\" viewBox=\"0 0 256 256\" color=\"#FFFFFF\" role=\"img\" aria-labelledby=\"title desc\"><title id=\"title\">Treadmill walk</title><desc id=\"desc\">Walking stride on a treadmill with the same adult limb proportions as the other icons.</desc><g id=\"pictogram\"><path d=\"M119.274 136.826 L99.024 171.9 L82.289 207.789\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M125.23 136.094 L145.48 171.168 L170.934 201.504\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M116.731 91.498 L122.008 134.475\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M112.03 86.03 L131.699 109.471 L155.861 95.521\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M119.97 85.055 L102.419 110.121 L81.046 128.055\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"113.197\" cy=\"62.714\" r=\"13\" fill=\"#FFFFFF\"/></g></svg>"};
+const STYLE={
+  "source": "Level UP App.pdf",
+  "sourcePageSize": [
+    3924,
+    6539
+  ],
+  "frameWidth": 375,
+  "sourceMeasurements": {
+    "pageMargin": 24,
+    "cardRadius": 20,
+    "rowRadius": 14,
+    "inputRadius": 10,
+    "primaryButtonHeight": 48,
+    "primaryButtonRadius": 14,
+    "walkButtonRadius": 24,
+    "titleSize": 28,
+    "rowTitleSize": 18,
+    "labelSize": 11,
+    "fieldValueSize": 18
+  },
+  "colors": {
+    "bg": "#050505",
+    "card": "#151515",
+    "row": "#222222",
+    "icon": "#2D2D2D",
+    "muted": "#A79DAF",
+    "secondary": "#7E728A",
+    "line": "#353039",
+    "white": "#FFFFFF",
+    "purple": "#6600FF",
+    "green": "#5DFF00",
+    "pink": "#E24EFF",
+    "blue": "#4C8EFF",
+    "orange": "#FF9900",
+    "yellow": "#F5E900"
+  },
+  "policy": "Original source screens are unchanged. Additions only. Figma importer uses original text fonts and styles, not a font substitution."
+};
+const EXERCISES=[["Floor chest press", "Two 5 lb dumbbells. Press above your chest.", "01-dumbbell-floor-press", 5], ["Bicep curl", "Two 5 lb dumbbells. Keep elbows beside your torso.", "02-dumbbell-bicep-curl", 5], ["Shoulder press", "Two 5 lb dumbbells. Press overhead with control.", "03-dumbbell-shoulder-press", 5], ["Bent-over row", "Two 5 lb dumbbells. Hinge and row toward your ribs.", "04-dumbbell-bent-over-row", 5], ["Goblet squat", "10 lb kettlebell. Hold close to your chest.", "05-kettlebell-goblet-squat", 10], ["Kettlebell deadlift", "10 lb kettlebell. Hinge with a neutral back.", "06-kettlebell-deadlift", 10], ["Seated band row", "Resistance band. Loop securely around your feet.", "07-resistance-band-row", 0], ["Band pull-apart", "Resistance band. Pull apart at chest height.", "08-resistance-band-pull-apart", 0], ["Lateral band walk", "Loop resistance band. Take controlled side steps.", "09-lateral-band-walk", 0], ["Dead bug", "Bodyweight. Extend opposite arm and leg slowly.", "10-bodyweight-dead-bug", 0], ["Glute bridge", "Bodyweight. Lift hips without arching the back.", "11-bodyweight-glute-bridge", 0]];
+// Adds new frames only. Existing source pages, components and prototype connections are not edited.
+const clean=s=>s.replace(/\s+/g,' ').trim().toLowerCase();
+const ink=h=>{const n=parseInt(h.slice(1),16);return{r:((n>>16)&255)/255,g:((n>>8)&255)/255,b:(n&255)/255}};
+const solid=h=>[{type:'SOLID',color:ink(h)}];
+function isAddition(n){for(let p=n;p;p=p.parent){if(p.getPluginData&&p.getPluginData('levelUpAddition'))return true;}return false;}
+async function run(){
+ if(figma.editorType!=='figma')throw Error('Run this in the Figma Design file containing your original screens.');
+ if(figma.loadAllPagesAsync)await figma.loadAllPagesAsync();
+ const frames=figma.root.findAll(n=>n.type==='FRAME'&&Math.abs(n.width-375)<1&&n.height>=800&&!isAddition(n));
+ const texts=f=>f.findAll(n=>n.type==='TEXT');
+ const has=(f,txt)=>texts(f).some(n=>clean(n.characters)===clean(txt));
+ const pick=(tests,preferred)=>{const a=frames.filter(f=>tests.every(t=>has(f,t)));return a.find(f=>preferred&&has(f,preferred))||a[0]};
+ const source={
+  workout:pick(['Workout','Upper body workout','Your exercises'],'0 / 5'),
+  steps:pick(['Daily steps','This week','Add Walk']),
+  walk:pick(['Add walk','Time','Speed','Incline'],'15 mins'),
+  custom:pick(['Add Custom Nutrition','Name','Serving size']),
+  nutrition:pick(['Nutrition','Food log','Log food']),
+  history:pick(['History','BREAKFAST','LUNCH']),
+  scan:pick(['Scan'])
+ };
+ for(const key of ['workout','steps','walk','custom','nutrition','history','scan'])if(!source[key])throw Error('Original '+key+' template was not found. Open the original file from your PDF. No pages have been changed.');
+
+ const FLOW_ORIGINALS={};
+ for(const spec of FLOW.originals){
+  const matches=frames.filter(f=>spec.labels.every(label=>texts(f).some(t=>clean(t.characters).includes(clean(label)))));
+  let candidate=matches.find(f=>Math.abs(f.height-(spec.bounds[3]-spec.bounds[1]))<3)||matches[0];
+  if(!candidate)throw Error('Missing original frame: '+spec.name+'. No changes made.');
+  FLOW_ORIGINALS[spec.id]=candidate;
+ }
+ const find=(f,p)=>texts(f).find(n=>p(clean(n.characters)));
+ const role={
+  title:find(source.workout,s=>s==='workout'),
+  back:find(source.workout,s=>s.includes('today')&&s.length<15),
+  cardTitle:find(source.workout,s=>s==='upper body workout'),
+  rowTitle:find(source.workout,s=>s==='title of exercise'),
+  body:find(source.workout,s=>s.startsWith('rest 45 seconds')),
+  label:find(source.custom,s=>s==='name'),
+  value:find(source.walk,s=>s==='session 01')||find(source.custom,s=>s==='food name'),
+  section:find(source.workout,s=>s==='your exercises'),
+  number:find(source.workout,s=>s.startsWith('0 / 5')||s.startsWith('2 / 5')),
+  large:find(source.steps,s=>s==='6,240'),
+  button:find(source.workout,s=>s==='finish workout'),
+  buttonPurple:find(source.walk,s=>s==='add'),
+  buttonPink:find(source.custom,s=>s==='add')
+ };
+ for(const key of Object.keys(role))if(!role[key])throw Error('The original '+key+' text style was not found. No pages have been changed.');
+ const allText=Object.values(source).flatMap(texts);const fonts=new Map();
+ for(const n of allText){if(!n.characters.length)continue;for(const f of n.getRangeAllFontNames(0,n.characters.length))fonts.set(f.family+'\t'+f.style,f);}
+ try{await Promise.all([...fonts.values()].map(f=>figma.loadFontAsync(f)));}catch(e){throw Error('A font used in your source design is unavailable. Install the original font; the importer will not replace it with another font. '+String(e));}
+ // No changes above this line. Import begins only when source templates and fonts are available.
+ const page=figma.createPage();page.name='LEVEL UP · Source-matched additions';page.setPluginData('levelUpAddition','true');await figma.setCurrentPageAsync(page);
+ const output=new Map(),links=[];
+ function firstFont(n){return n.getRangeFontName(0,Math.min(1,n.characters.length));}
+ function setText(node,value,w){if(node.characters!==value){const f=firstFont(node),size=node.getRangeFontSize(0,Math.min(1,node.characters.length));if(node.fontName===figma.mixed)node.fontName=f;if(node.fontSize===figma.mixed)node.fontSize=size;node.characters=value;}if(w){node.resize(w,Math.max(1,node.height));node.textAutoResize='HEIGHT';}}
+ function text(parent,e,template){const node=(template||role[e.role]||role.body).clone();parent.appendChild(node);setText(node,e.text,e.w);node.name=e.text.split('\n')[0];node.x=e.x;node.y=e.y;
+  if(e.role==='label'||e.role==='body'||e.role==='back'){} // Keep original typography and color by default.
+  if(e.fill&&(!['body','label','back'].includes(e.role)||e.fill!==STYLE.colors.muted))node.fills=solid(e.fill);
+  return node;
+ }
+ function shape(parent,e){const n=figma.createRectangle();parent.appendChild(n);n.resize(Math.max(.01,e.w),Math.max(.01,e.h));n.x=e.x;n.y=e.y;n.cornerRadius=e.radius||0;n.fills=solid(e.fill);n.name='Source pattern / '+(e.radius===20?'summary card':e.radius===14?'exercise row':e.radius===10?'input':'surface');return n;}
+ function render(parent,e){
+  if(e.type==='text')return text(parent,e);
+  if(e.type==='rect')return shape(parent,e);
+  if(e.type==='icon'){const n=figma.createNodeFromSvg(ICONS[e.key]);parent.appendChild(n);n.resize(e.w,e.h);n.x=e.x;n.y=e.y;n.name='Exercise / '+e.key;return n;}
+  if(e.type==='completion'){const circle=figma.createEllipse();parent.appendChild(circle);circle.resize(20,20);circle.x=e.x;circle.y=e.y;circle.strokes=solid('#5DFF00');circle.strokeWeight=2;circle.fills=e.checked?solid('#5DFF00'):[];circle.name=e.checked?'Completed':'Not completed';if(e.checked){const check=figma.createNodeFromSvg('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M5 10l3 3 7-7" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');parent.appendChild(check);check.x=e.x;check.y=e.y;}return circle;}
+  if(e.type==='walkTypes'){
+   const origin=source.walk.absoluteBoundingBox;
+   const exact=source.walk.findAll(n=>n.children&&Math.abs(n.width-335)<2&&Math.abs(n.height-111)<3&&['Treadmill','Walking Pad','Outdoor walk'].every(label=>has(n,label)))[0];
+   if(exact){const clone=exact.clone();parent.appendChild(clone);clone.x=e.x;clone.y=e.y;return clone;}
+   const tiles=source.walk.findAll(n=>n.children&&Math.abs(n.width-105)<2&&Math.abs(n.height-111)<3);
+   if(tiles.length>=3){for(const tile of tiles.slice(0,3)){const box=tile.absoluteBoundingBox,clone=tile.clone();parent.appendChild(clone);clone.x=box.x-origin.x;clone.y=e.y;}return;}
+   for(let j=0;j<3;j++){const x=e.x+j*115,b=shape(parent,{x,y:e.y,w:105,h:111,fill:j===0?'#100027':'#222222',radius:14});if(j===0){b.strokes=solid('#6600FF');b.strokeWeight=3;}render(parent,{type:'icon',x:x+27,y:e.y+17,w:51,h:51,key:['walk-treadmill','walk-pad','walk-outdoor'][j]});const sample=find(source.walk,t=>t===['treadmill','walking pad','outdoor walk'][j]);const label=text(parent,{x:x+5,y:e.y+72,w:95,text:['Treadmill','Walking Pad','Outdoor walk'][j],role:'body',fill:'#FFFFFF'},sample||role.body);label.textAlignHorizontal='CENTER';}return;
+  }
+  if(e.type==='button'){const b=figma.createFrame();parent.appendChild(b);b.name=e.text;b.resize(e.w,e.h);b.x=e.x;b.y=e.y;b.cornerRadius=e.radius;b.fills=solid(e.fill);b.clipsContent=false;const sourceLabel=e.accent==='purple'?role.buttonPurple:e.accent==='pink'?role.buttonPink:role.button;const label=text(b,{x:8,y:0,w:e.w-16,text:e.text,role:'button',fill:e.textFill},sourceLabel);label.textAlignHorizontal='CENTER';label.y=(e.h-label.height)/2;if(e.destination)links.push({node:b,destination:e.destination});return b;}
+ }
+ function bounds(n,origin){const b=n.absoluteBoundingBox;if(!b)return null;return{x:b.x-origin.x,y:b.y-origin.y,w:b.width,h:b.height};}
+ function copyBand(sourceFrame,parent,y0,y1,newY){const origin=sourceFrame.absoluteBoundingBox;let copied=0;
+  function walk(n){for(const c of n.children||[]){const b=bounds(c,origin);if(!b||c.visible===false)continue;if(b.x>=-.2&&b.x+b.w<=375.2&&b.y>=y0-.2&&b.y+b.h<=y1+.2){const clone=c.clone();parent.appendChild(clone);clone.x=b.x;clone.y=newY+(b.y-y0);copied++;}else if(c.children&&b.y<y1&&b.y+b.h>y0)walk(c);}}
+  walk(sourceFrame);return copied;
+ }
+ function frameFor(s,index){const f=figma.createFrame();page.appendChild(f);f.name='ADD / '+s.name+' / '+s.id;f.resize(375,s.height);f.x=(index%4)*425;f.y=Math.floor(index/4)*1100;f.cornerRadius=20;f.fills=solid('#050505');f.clipsContent=true;f.setPluginData('levelUpAddition','true');f.setPluginData('sourceTemplateId',source[s.source].id);f.setPluginData('designNote',s.note||'');return f;}
+ function ancestorRow(n,frame){for(let p=n.parent;p&&p!==frame;p=p.parent)if(p.width>=320&&p.width<=340&&p.height>=95&&p.height<=110)return p;return null;}
+ function cloneRoutine(s,index){const f=source.workout.clone();page.appendChild(f);f.name='ADD / '+s.cloneRoutine.name;f.x=(index%4)*425;f.y=Math.floor(index/4)*1100;f.setPluginData('levelUpAddition','true');f.setPluginData('sourceTemplateId',source.workout.id);
+  const tt=texts(f),cfg=s.cloneRoutine;
+  const change=(a,b)=>{for(const n of tt.filter(n=>clean(n.characters)===clean(a)))setText(n,b);};
+  for(const n of tt.filter(n=>clean(n.characters)==='upper body workout')){const prefix=cfg.name.split(' ')[0];n.insertCharacters(0,prefix,'BEFORE');n.deleteCharacters(prefix.length,prefix.length+5);}
+  for(const n of tt){const match=n.characters.match(/(?:0|2)\s*\/\s*5/);if(match){const at=match.index+match[0].length-1;n.insertCharacters(at,String(cfg.exerciseIndices.length),'BEFORE');n.deleteCharacters(at+1,at+2);}}
+  change('20 min',cfg.minutes+' min');change('0 / 5','0 / '+cfg.exerciseIndices.length);change('2 / 5','0 / '+cfg.exerciseIndices.length);change('5 exercises',cfg.exerciseIndices.length+' exercises');
+  const titles=tt.filter(n=>clean(n.characters)==='title of exercise').sort((a,b)=>a.absoluteBoundingBox.y-b.absoluteBoundingBox.y);const origin=f.absoluteBoundingBox;
+  for(let j=0;j<titles.length;j++){const old=titles[j],row=ancestorRow(old,f);if(j>=cfg.exerciseIndices.length){if(row)row.visible=false;else old.visible=false;continue;}const ex=EXERCISES[cfg.exerciseIndices[j]],oldY=old.absoluteBoundingBox.y-origin.y;
+   setText(old,ex[0],190);if(row){const desc=row.findAll(n=>n.type==='TEXT'&&(clean(n.characters).startsWith('short description')||clean(n.characters).startsWith('and what equipment')||clean(n.characters)==='be using.'));for(let k=0;k<desc.length;k++){if(k===0)setText(desc[k],ex[1],193);else desc[k].visible=false;}}
+   const rowY=oldY-24;shape(f,{x:32,y:rowY+8,w:85,h:85,fill:'#2D2D2D',radius:10});render(f,{type:'icon',x:37,y:rowY+13,w:75,h:75,key:ex[2]});
+  }
+  return f;
+ }
+ for(let i=0;i<SCREENS.length;i++){
+  const s=SCREENS[i];let frame;
+  if(s.cloneRoutine)frame=cloneRoutine(s,i);
+  else if(['walk-details','walk-estimate','walk-cadence','manual-steps','edit-walk'].includes(s.id)){
+   frame=source.walk.clone();page.appendChild(frame);frame.name='ADD / '+s.name+' / '+s.id;frame.x=(i%4)*425;frame.y=Math.floor(i/4)*1100;frame.setPluginData('levelUpAddition','true');frame.setPluginData('sourceTemplateId',source.walk.id);
+   if(s.height!==812){frame.resize(375,s.height);copyBand(source.walk,frame,778,812,s.height-34);}
+   const sheetTop=s.id==='manual-steps'?272:234;
+   for(const e of s.elements.slice(5).filter(e=>e.y>=sheetTop))render(frame,e);
+  }else{
+   frame=frameFor(s,i);const top=copyBand(source.workout,frame,0,44,0),bottom=copyBand(source.workout,frame,778,812,s.height-34);
+   for(let j=0;j<s.elements.length;j++){if((top&&j<2)||(bottom&&j===4))continue;render(frame,s.elements[j]);}
+  }
+  frame.setPluginData('additionId',s.id);output.set(s.id,frame);
+ }
+ for(const {node,destination}of links){const to=output.get(destination);if(to&&node.setReactionsAsync){try{await node.setReactionsAsync([{trigger:{type:'ON_CLICK'},actions:[{type:'NODE',destinationId:to.id,navigation:'NAVIGATE',transition:null}]}]);}catch(e){node.setPluginData('intendedDestination',destination);}}}
+
+ page.name='LEVEL UP · Complete user flows';
+ for(const spec of FLOW.originals){const f=FLOW_ORIGINALS[spec.id].clone();page.appendChild(f);f.name='SOURCE COPY / '+spec.name;f.setPluginData('levelUpAddition','true');output.set(spec.id,f);}
+ for(const [id,f]of output){const p=FLOW.positions[id];if(!p)throw Error('Missing layout for '+id);f.x=p[0];f.y=p[1];f.setPluginData('flowId',id);for(const n of [f,...f.findAll(()=>true)])if(n.reactions&&n.reactions.length&&n.setReactionsAsync)await n.setReactionsAsync([]);}
+ let wired=0;const slots={};
+ for(const e of FLOW.edges){const f=output.get(e.source),to=output.get(e.target);if(!f||!to)continue;
+  let r=e.region;
+  const labelNodes=texts(f).filter(n=>clean(n.characters)===clean(e.label));
+  if(labelNodes.length){const b=labelNodes[0].absoluteBoundingBox,fb=f.absoluteBoundingBox;r=[Math.max(0,b.x-fb.x-8),Math.max(44,b.y-fb.y-8),Math.min(350,b.width+16),Math.max(32,b.height+16)];}
+  else if(!e.back&&FLOW.edges.filter(v=>v.source===e.source&&!v.back&&JSON.stringify(v.region)===JSON.stringify(e.region)).length>1){const peers=FLOW.edges.filter(v=>v.source===e.source&&!v.back&&JSON.stringify(v.region)===JSON.stringify(e.region));const index=peers.indexOf(e);r=[16+index*343/peers.length,f.height-95,343/peers.length,48];}
+  const hot=figma.createFrame();f.appendChild(hot);hot.name='FLOW / '+e.label+' → '+e.target;hot.x=r[0];hot.y=Math.min(r[1],f.height-90);hot.resize(r[2],r[3]);hot.fills=[];hot.clipsContent=false;
+  await hot.setReactionsAsync([{trigger:{type:'ON_CLICK'},actions:[{type:'NODE',destinationId:to.id,navigation:'NAVIGATE',transition:null}]}]);wired++;
+  if(e.back)continue;
+  const color=e.source==='today'&&e.target==='nutrition'?'#FF9900':(e.source.includes('workout')||e.source.startsWith('exercise')?'#5DFF00':e.source.includes('walk')||e.source==='steps'?'#6600FF':'#E24EFF');
+  const a=[f.x+375,f.y+f.height/2],b=[to.x,to.y+to.height/2],mid=a[0]+60;
+  const path='M '+a[0]+' '+a[1]+' L '+mid+' '+a[1]+' L '+mid+' '+b[1]+' L '+b[0]+' '+b[1];
+  const v=figma.createNodeFromSvg('<svg xmlns="http://www.w3.org/2000/svg" width="6000" height="11000"><path d="'+path+'" fill="none" stroke="'+color+'" stroke-width="3"/><circle cx="'+a[0]+'" cy="'+a[1]+'" r="7" fill="'+color+'"/><path d="M '+(b[0]-12)+' '+(b[1]-7)+' L '+b[0]+' '+b[1]+' L '+(b[0]-12)+' '+(b[1]+7)+'" fill="none" stroke="'+color+'" stroke-width="3"/></svg>');page.insertChild(0,v);v.x=0;v.y=0;v.name='ROUTE / '+e.source+' / '+e.label;v.locked=true;
+ }
+ page.selection=[output.get('today')];figma.viewport.scrollAndZoomIntoView([output.get('today'),output.get('steps')]);figma.notify('Created '+output.size+' screens and '+wired+' prototype routes on a new page. Original pages unchanged.',{timeout:8000});figma.closePlugin();
+}
+run().catch(error=>{figma.notify(String(error),{error:true,timeout:12000});figma.closePlugin();});
